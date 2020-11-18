@@ -304,7 +304,7 @@ h2 {
     content: '';
     display: block;
     position: absolute;
-    background: url(/img/bg_slogan.svg) no-repeat right center;
+    background: url(../img/bg_slogan.svg) no-repeat right center;
     width: 465px;
     height: 40px;
     top: 39%;
@@ -420,7 +420,7 @@ h2 {
     top: 40%; }
 
 .swiper-button-next {
-  background: url(/img/icon_arrow.svg) no-repeat;
+  background: url(../img/icon_arrow.svg) no-repeat;
   width: 45px;
   height: 45px;
   filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
@@ -428,7 +428,7 @@ h2 {
   right: 0; }
 
 .swiper-button-prev {
-  background: url(/img/icon_arrow.svg) no-repeat;
+  background: url(../img/icon_arrow.svg) no-repeat;
   transform: rotate(180deg);
   width: 45px;
   height: 45px;
@@ -791,7 +791,7 @@ button {
   border-radius: 5px;
   font-size: 1rem;
   outline: none;
-  background: url(/img/icon_search.svg) no-repeat left 10px center;
+  background: url(../img/icon_search.svg) no-repeat left 10px center;
   background-size: .9rem;
   margin: 0px 0 15px; }
 
@@ -941,8 +941,8 @@ button {
   margin: 50px 0 0; }
 
 body {
-  cursor: url(/img/wing.cur), auto;
-  -webkit-cursor: url(/img/wing.cur), auto; }
+  cursor: url(../img/wing.cur), auto;
+  -webkit-cursor: url(../img/wing.cur), auto; }
 
 footer {
   background: #555;
