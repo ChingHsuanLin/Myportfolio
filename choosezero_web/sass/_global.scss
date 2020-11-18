@@ -1,0 +1,15 @@
+//全域樣式，設定全站樣式統一的地方
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+//.clearfix { display: inline-block;}
+html[xmlns] .clearfix { display: block;}
+* html .clearfix { height: 1%;}
+//全域樣式
+body{ @include fontSty; font-size:15px; font-size:100%; color:#555;}
+input,textarea,select { @include fontSty; color:#555;}
+
+// .btn{ @include fontSty; @include btn($light-gray,$sub-color,0,6px 13px); @include btnBasic;
+// 	&:hover{ background:#971527;}
+// }
+// .btn-canel{ @include fontSty; @include btn($light-black,$gray,0,6px 13px); @include btnBasic;
+// 	&:hover{ background:#bcbcbc;}
+// }

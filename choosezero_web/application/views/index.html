@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!-- html meta 屬性設定 -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 將使用ie瀏覽器的版本設定在預設，或是可以指定版本 ex:content="IE=8" -->
+
+	<meta name="title" content="天使肉毒">
+	<!-- <meta name="author" content="作者"> 如果不是新聞或blog類型的網站，基本上是不需要設定 -->
+	<!-- <meta name="keyword" content="關鍵字,關鍵字"> 不建議設定了，瀏覽器不會抓這裡，也不影響SEO -->
+	<meta name="description" content="天使肉毒，選擇純淨 美的自然">
+	<meta name="Copyright" content="© 2019 天使肉毒">
+
+    <!-- 設定給手機device用 -->
+	<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes"/>
+	
+
+	<!-- Facebook og: 屬性設定 -->
+	<!-- <meta property="og:title" content="如果是文章就是文章的標題" />
+	<meta property="og:site_name" content="網站的名稱" />
+	<meta property="og:url" content="自定義分享連結的網址" />
+	<meta property="og:description" content="文章描述通常2~4句子" />
+	<meta property="og:image" content="呈現的圖片至少要1200x630"/>
+	<meta property="og:type" content="website" /> -->
+	<!-- https://developers.facebook.com/tools/debug (Facebook測試的og屬性的地方) -->
+
+	<title>天使肉毒 | 選擇純淨 美的自然</title>
+	<!-- 網頁頁籤上的icon -->
+	<link rel="shortcut icon" href="/img/favicon.ico">
+
+	<script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="/js/jquery.nav.js"></script>
+	<!-- 有swiper 跟滾動fix的JS -->
+	<!-- <script type="text/javascript" src="/js/jquery-scrolltofixed-min.js"></script> -->
+	<script src="/js/swiper.min.js"></script>
+	<script src="/js/wow.js"></script>
+
+    <!-- <link rel="stylesheet" href="/css/fontawesome-all.min-min.css"> -->
+    <link rel="stylesheet" href="/css/animate.min.css">
+    <link rel="stylesheet" href="/css/swiper.min.css">
+	<link rel="stylesheet" href="/css/sty.css">
+	<!--[if IE]>
+		<link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<![endif]-->
+
+	<!-- 讓ie9以下看懂htm5標簽 -->
+	<!--[if lte IE 8]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<!-- {template header} -->
+
+
+
+<div class="m-nav">
+    <div class="o-grid__item">
+        <button class="c-hamburger c-hamburger--htx">
+            <span>toggle menu</span>
+        </button>
+    </div>
+</div>
+
+<div class="header-box">
+    <a href="#page1" class="logo" id="logo"><h1><img src="/img/logo.svg" alt="天使肉毒"></h1></a>
+    <div class="nav">
+        <ul>
+            <li><a href="#page1" class="">選擇純淨 美的自然</a></li>
+            <li><a href="#page2" class="">甚麼是天使肉毒？</a></li>
+            <li><a href="#page3" class="">美的診療室</a></li>
+            <li><a href="#page4" class="">肉毒桿菌素純不純，你該知道</a></li>
+             <li><a href="#page5" class="">別讓複合性蛋白影響妳的美麗</a></li>
+            <li><a href="#page6" class="">美的見證</a></li>
+        </ul>
+        <a href="" class="fb"><img src="/img/icon_fb.png" alt=""></a>
+    </div>
+</div>
+
+<script>
+//漢堡
+$(window).load(function(){
+    var toggles = document.querySelectorAll(".c-hamburger");
+    for (var i = toggles.length - 1; i >= 0; i--) {
+        var toggle = toggles[i];
+        toggleHandler(toggle);
+    };
+    function toggleHandler(toggle) {
+        toggle.addEventListener( "click", function(e) {
+            e.preventDefault();
+            if (this.classList.contains("is-active") === true) {
+                this.classList.remove("is-active");
+                // $(".side-nav-wrap").stop().animate({left:"-250px"},500);//點漢堡側邊欄左右滑動
+                $(".nav").slideUp();
+            }
+            else {
+                this.classList.add("is-active");
+                // $(".side-nav-wrap").stop().animate({left:"0"},500);//點漢堡側邊欄左右滑動
+                $(".nav").slideDown();
+
+            }
+        });
+    }
+
+
+  if($(window).width() < 1220)
+  {
+    //點擊a選單消失 
+      $('.nav a').on('click',function(){
+        $(".nav").hide();
+        $(".c-hamburger").removeClass("is-active");
+      });
+    
+  } else {
+
+    $('.nav a').on('click',function(){
+          $(".nav").show();
+        });
+
+  }
+
+
+});
+
+//漢堡視窗resize
+$(window).resize(function(){
+    var w_Width = $(window).width();
+    if( w_Width < 1220){
+      //點擊a選單消失 
+      $('.nav a').on('click',function(){
+        $(".nav").hide();
+        $(".c-hamburger").removeClass("is-active");
+      });
+
+    }
+    else{
+       $('.nav a').on('click',function(){
+          $(".nav").show();
+        });
+
+    }
+    if( w_Width >= 780){
+        $('.nav').removeAttr('style');
+        $('.c-hamburger').removeClass('is-active');
+    }
+});
+
+
+
+  // 捲軸滾動，選單跟著動
+  $('.nav').onePageNav({
+      currentClass: 'act',
+      changeHash: false,
+      scrollSpeed: 750,
+      scrollThreshold: 0.1,
+      filter: '',
+      easing: 'swing',
+      begin: function() {
+      },
+      end: function() {
+      },
+      scrollChange: function($currentListItem) {
+      }
+    });
+
+
+
+</script>
+
+
+
+<div class="btn_top" id="top">
+	<img src="/img/icon_top.svg" alt="top">
+</div>
+
+<a class="more_clinic" href="map.html">
+	<img src="/img/icon_clinic.svg" alt="top">
+	<span>美的診療室</span>
+</a>
+
+<!-- 選擇純淨 美的自然 影音-->
+<div class="wrap wrap1" id="page1">
+	<!--影片網址尚未確認-->
+	<div class="video"><iframe src="https://www.youtube.com/watch?v=aM8qJH98NEI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+	<img src="/img/slogan.png" alt="">
+</div>
+
+<!-- 甚麼是天使肉毒？ -->
+<div class="wrap_box wrap_box2" id="page2">
+	<div class="wrap">
+		<div class="tit_box">
+			<div class="tit_logo wow bounceInLeft" data-wow-delay=".5s">
+				<img src="/img/logo.svg" alt="logo">
+			</div>
+			<div class="tit_txt">
+				<div class="tit">
+					<h2>天使肉毒</h2>
+				</div>
+				<h3>選擇純淨，美的自然</h3>	
+				<p>獲得美國食品及藥物管理局 (FDA) 的認證、歐盟(CE)及台灣衛福部食品藥物管理署(TFDA)核准，為經過純化技術萃煉而成的純淨肉毒桿菌素，可降低因為抗藥性所造成的療程失效問題。<br>
+					請和專業醫生討論，選擇零複合性蛋白的純淨肉毒。
+				</p>
+			</div>
+		</div>
+		
+		<div class="slogan">
+			<div class="md"><img src="/img/md1.png" alt=""></div>
+			<div class="box box_l">
+				<h2>純淨</h2>
+				<p>不含複合性蛋白，降低抗藥性的發生。複合性蛋白可能刺激人體產生抗體，一旦有抗藥性的產生，療程效果將會有下降，甚至失效的情形。因此不含複合性蛋白的肉毒桿菌素可能降低抗藥性風險，增加長期反覆施打的安全性與有效性。
+				</p>	
+			</div>
+			<div class="box box_r">
+				<h2>自然</h2>
+				<p>精準度高，擴散範圍小，效果更加自然，不易造成表情僵硬的情形。
+				</p>	
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 美的診療室 -->
+<div class="wrap_box wrap_box3" id="page3">
+	<div class="wrap">
+		<div class="tit tit_c">
+			<img src="/img/icon_clinic2.svg" alt="美的診療室">
+			<h2>美的診療室</h2>
+		</div>
+		<h3>您可以在以下診間感受純淨且自然的體驗</h3>
+		<div class="swiper-container swiper-clinic">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="map.html">
+						<ul>
+							<li>敦化麗思醫美診所1敦化麗思醫美診所1</li>
+							<li>
+								<img src="/img/icon_address.svg" alt="">
+								<p>台北市大安區忠孝東路四段177號4樓台北市大安區忠孝東路</p>
+							</li>
+							<li>
+								<img src="/img/icon_phone.svg" alt="">
+								<p>02-1234567</p>
+							</li>
+						</ul>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="map.html">
+						<ul>
+							<li>敦化麗思醫美診所2</li>
+							<li>
+								<img src="/img/icon_address.svg" alt="">
+								<p>台北市大安區忠孝東路四段177號4樓台北市大安區忠孝東路台北</p>
+							</li>
+							<li>
+								<img src="/img/icon_phone.svg" alt="">
+								<p>02-1234567</p>
+							</li>
+						</ul>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="map.html">
+						<ul>
+							<li>敦化麗思醫美診所3</li>
+							<li>
+								<img src="/img/icon_address.svg" alt="">
+								<p>台北市大安區忠孝東路四段177號4樓台北市大安區忠孝東路</p>
+							</li>
+							<li>
+								<img src="/img/icon_phone.svg" alt="">
+								<p>02-1234567</p>
+							</li>
+						</ul>
+					</a>
+				</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination clinic-pag"></div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next clinic-next"></div>
+			<div class="swiper-button-prev clinic-prev"></div>
+		</div>
+
+		<div class="btn_box">
+			<a class="btn" href="map.html">
+				<span>全部診療室</span>
+				<img src="/img/btn.svg" alt="更多診療室">
+			</a>
+		</div>
+		
+	</div>
+</div>
+
+<!-- 肉毒桿菌素純不純，你該知道 -->
+<div class="wrap_box wrap_box4" id="page4">
+	<div class="wrap">
+		<div class="tit tit_c">
+			<h2>肉毒桿菌素純不純，你該知道</h2>
+		</div>
+		<div class="know">
+			<div class="md2">
+				<img src="/img/md2.png" alt="路嘉怡">
+			</div>
+			<div class="num_wrap">
+				<div class="num_box wow bounceInRight">
+					<img src="/img/num1.svg" alt="69%">
+					<p>接受三次以上肉毒桿菌素療程的人中，69%感到療程成效逐漸遞減。</p>
+				</div>
+				<div class="num_box wow bounceInRight" data-wow-delay=".5s">
+					<img src="/img/num2.svg" alt="64%">
+					<p>儘管感覺成效下滑，64%的使用者依然繼續接受肉毒桿菌素療程。</p>
+				</div>
+				<div class="num_box wow bounceInRight" data-wow-delay="1s">
+					<img src="/img/num3.svg" alt="74%">
+					<p>74%的肉毒桿菌素使用者願意推薦高純度（不含複合性蛋白）的肉毒桿菌素，以降低抗體生成及施打肉毒桿菌素成效遞減的風險。</p>
+				</div>
+				<div class="num_box wow bounceInRight" data-wow-delay="1.5s">
+					<img src="/img/num4.svg" alt="36%">
+					<p>36%的肉毒桿菌素療程使用者意識到肉毒桿菌素中的複合性蛋白可能會在人體內形成抗體。</p>
+				</div>
+				<div class="docter">
+					和您的醫生討論選擇零複合性蛋白的純淨肉毒桿菌素
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<!-- 別讓複合性蛋白影響妳的美麗 -->
+<div class="wrap_box wrap_box5" id="page5">
+	<div class="wrap">
+		<div class="tit tit_c">
+			<h2>別讓複合性蛋白影響妳的美麗</h2>
+		</div>
+		<div class="qa">
+			<span>Q.</span>
+			<p>為甚麼您不需要複合性蛋白？</p>
+		</div>
+		<ul class="q1_cont">
+			<li>
+				<div class="up"><p>迷思</p></div>
+				<div class="down"><p>複合性蛋白是保護圈？存在多數肉毒桿菌中的外來蛋白，聽說可以穩定並促使組織吸收肉毒桿菌素。</p></div>
+			</li>
+			<li>
+				<div class="up"><p>實情</p></div>
+				<div class="down"><p>複合性蛋白在療程中無效果，容易和施打疫苗概念一樣，使人體對這外來的蛋白產生抗體。</p></div>
+			</li>
+			<li>
+				<div class="up"><p>效應</p></div>
+				<div class="down"><p>抗體的生成可能導致肉毒桿菌素愛用者的療程失效。</p></div>
+			</li>
+		</ul>
+		<div class="qa">
+			<span>Q.</span>
+			<p>肉毒桿菌素不含複合性蛋白有什麼好處？</p>
+		</div>
+		<div class="q2_cont">
+			<ul class="qa_l">
+				<li class="wow bounceIn" data-wow-delay=".5s">
+					<img src="/img/circle_Z.svg" alt="ZERO">
+					<p><span>Zero</span><br><span>零</span>複合性蛋白=產生抗體機率較低<br>讓您安心使用</p>
+				</li>
+				<li class="wow bounceIn" data-wow-delay="1s">
+					<img src="/img/circle_E.svg" alt="ZERO">
+					<p><span>Efficacy</span><br><span>成效</span>經臨床證實<br>讓您美得自然</p>
+				</li>
+				<li class="wow bounceIn" data-wow-delay="1.5s">
+					<img src="/img/circle_R.svg" alt="ZERO">
+					<p><span>Reduced</span><br><span>降低</span>肉毒桿菌素抗藥性風險<br>讓您美麗不間斷</p>
+				</li>
+				<li class="wow bounceIn" data-wow-delay="2s">
+					<img src="/img/circle_O.svg" alt="ZERO">
+					<p><span>Optimal</span><br>每次療效都有<span>良好</span>成效<br>讓您散發自然光彩</p>
+				</li>
+			</ul>
+			<div class="qa_r">
+				<img src="/img/md3.png" alt="路嘉怡">
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<!-- 美的見證 -->
+<div class="wrap_box wrap_box6" id="page6">
+	<div class="wrap">
+		<div class="tit tit_c">
+			<h2>美的見證</h2>
+		</div>
+		<div class="swiper-container swiper-article">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="article">
+						<div class="pic" style="background:url(/img/pic.png) no-repeat center center / cover;">
+							<div class="name">網紅小白</div>
+						</div>
+						<div class="article_tit">使用者經驗分享標題使用者經驗分享標題使用者經驗分享</div>
+						<div class="article_txt">
+							使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者
+						</div>
+						<div class="btn_box">
+							<div class="btn" href="map.html">
+								<span>閱讀全文</span>
+								<img src="/img/btn.svg" alt="more">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="article">
+						<div class="pic" style="background:url(/img/pic2.png) no-repeat center center / cover;">
+							<div class="name">網紅ABABABC</div>
+						</div>
+						<div class="article_tit">使用者經驗分享標題使用者經驗分享標題使用者經驗分享</div>
+						<div class="article_txt">
+							使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者
+						</div>
+						<div class="btn_box">
+							<div class="btn" href="map.html">
+								<span>閱讀全文</span>
+								<img src="/img/btn.svg" alt="more">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="article">
+						<div class="pic" style="background:url(/img/pic3.png) no-repeat center center / cover;">
+							<div class="name">直撥主小甜甜</div>
+						</div>
+						<div class="article_tit">使用者經驗分享標題使用者經驗分享標題使用者經驗分享</div>
+						<div class="article_txt">
+							使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者
+						</div>
+						<div class="btn_box">
+							<div class="btn" href="map.html">
+								<span>閱讀全文</span>
+								<img src="/img/btn.svg" alt="more">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="article">
+						<div class="pic" style="background:url(/img/pic2.png) no-repeat center center / cover;">
+							<div class="name">網紅ABABABC</div>
+						</div>
+						<div class="article_tit">使用者經驗分享標題使用者經驗分享標題使用者經驗分享</div>
+						<div class="article_txt">
+							使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者
+						</div>
+						<div class="btn_box">
+							<div class="btn" href="map.html">
+								<span>閱讀全文</span>
+								<img src="/img/btn.svg" alt="more">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination article-pag"></div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next article-next"></div>
+			<div class="swiper-button-prev article-prev"></div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- lightbox -->
+<div class="mask" style="display:none;"></div>
+<div class="lightbox_wrap" style="display:none;">
+	<div class="close"><img src="/img/icon_close.svg" alt="關閉"></div>
+	<div class="light_box">
+		<div class="lb_tit">
+			<h3>使用者經驗分享標題使用者經驗分享標題使用者經驗分享標題</h3>
+			<p>By 網紅小直撥主</p>
+		</div>
+		<div class="lb_cont">後台上文使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者，使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者，使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者使用驗分享內文使用者經驗用者經驗分享內文使用者經驗分享內文使用者使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者，使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者，使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者使用驗分享內文使用者經驗用者經驗分享內文使用者經驗分享內文使用者使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者後台上文使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者，使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者，使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者使用驗分享內文使用者經驗用者經驗分享內文使用者經驗分享內文使用者使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者，使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者，使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者使用驗分享內文使用者經驗用者經驗分享內文使用者經驗分享內文使用者使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經驗分享內文使用者經使用者經驗分享內文使用者經驗分享內文使用者</div>
+	</div>
+</div>
+
+<script>
+	$(window).load(function(){
+
+		$('#logo').on('click',function(){
+			$('html,body').animate({ scrollTop: 0},'slow');
+		});
+
+		$('#top').on('click',function(){
+			$('html,body').animate({ scrollTop: 0},'slow');
+		});
+
+
+		//打開lightbox和背景黑
+		$('.article').on('click',function(){
+			$('.lightbox_wrap , .mask').fadeIn(500);
+			$('body').addClass('noscroll');
+		});
+
+
+		//lightbox關閉
+		$('.close').on('click',function(){
+			$('.lightbox_wrap , .mask').fadeOut(500);
+			$('body').removeClass('noscroll');
+		});
+
+		var SwiperClinic = new Swiper('.swiper-clinic', {
+
+			slidesPerView: 3, 
+			spaceBetween: 20,
+			loop: true,
+			slidesPerGroup: 3,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			breakpoints: {
+				780: {
+					slidesPerView: 2,
+					slidesPerView: 2,
+				},
+				480: {
+					slidesPerView: 1,
+					slidesPerView: 1,
+				},
+			}
+		}); 
+
+		var SwiperArticle = new Swiper('.swiper-article', {
+
+			slidesPerView: 3, 
+			spaceBetween: 50,
+			loop: true,
+			slidesPerGroup: 3,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			breakpoints: {
+				780: {
+					slidesPerView: 2,
+					slidesPerGroup: 2,
+				},
+				600: {
+					slidesPerView: 1,
+					slidesPerGroup: 1,
+				},
+			}
+		}); 
+
+
+		new WOW().init();
+		var wow = new WOW(
+  		{
+		    boxClass:'wow',// 要套用WOW.js縮需要的動畫class(預設是wow)
+		    animateClass: 'animated', // 要"動起來"的動畫(預設是animated, 因此如果你有其他動畫library要使用也可以在這裡調整)
+		    offset: 0, // 距離顯示多遠開始顯示動畫 (預設是0,因此捲動到顯示時才出現動畫)
+		    mobile:true,// 手機上是否要套用動畫 (預設是true)
+		    live: true, // 非同步產生的內容是否也要套用 (預設是true, 非常適合搭配SPA)
+		    callback: function(box) {
+		      // 當每個要開始時, 呼叫這裡面的內容, 參數是要開始進行動畫特效的element DOM
+		    },
+		    scrollContainer: null // 可以設定成只套用在某個container中捲動才呈現, 不設定就是整個視窗
+		  }
+		);
+		wow.init();
+
+
+	});
+
+
+
+
+
+
+</script>
+
+
+<!-- template footer -->
+<footer>
+	copyright@天使肉毒
+</footer>
+</body>
+</html>

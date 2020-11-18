@@ -1,0 +1,68 @@
+//浮動控制
+@mixin position($top,$right,$bottom,$left,$zindex) {
+	position:absolute;
+	top     :$top;
+	right   :$right;
+	bottom  :$bottom;
+	left    :$left;
+	z-index :$zindex;
+}
+//輸入框的樣式 input
+//顏色、背景色、圓角、間距
+@mixin inputSty($color,$bg,$bor-r,$pad){
+	color: $color;
+	background :$bg;
+	border-radius :$bor-r;
+	padding     :$pad;
+
+}
+//按鈕類項目 btn
+//顏色、背景色、圓角、間距
+@mixin btn($color,$bg,$bor-r,$pad){
+	color:$color;
+	background:$bg;
+	border-radius:$bor-r;
+	padding:$pad;
+	
+}
+
+//隱藏文字
+@mixin ht{ white-space:nowrap; text-indent:100%; overflow:hidden;}
+//裁切文字
+@mixin ct{ white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+//display middle
+@mixin dvm{ display:inline-block; vertical-align:middle;}
+//display top
+@mixin dvt{ display:inline-block; vertical-align:top;}
+//display bottom
+@mixin dvb{ display:inline-block; vertical-align:bottom;}
+//input style
+@mixin inputStyBasic{ border: 1px solid #999; outline : 0; transition: box-shadow .4s,background .4s;
+	&:focus{ background:#fff; box-shadow:0 0 10px #ccc;}
+}
+//Button style
+@mixin btnBasic{ display:inline-block; border:none; -webkit-appearance: none; cursor:pointer; transition: background .3s; vertical-align: middle;}
+
+//將div設定成的圖的寬高再加上路徑
+//$name:圖的名稱
+//$format:圖的副檔名
+//image-width 可以自動計算圖的寬高
+@mixin blockImg($name,$format){
+	background: url("/img/$name.$format") no-repeat;
+	width: image-width("/img/$name.$format");
+	height: image-height("/img/$name.$format");
+}
+
+//測試@content
+@mixin positions($top,$right,$bottom,$left,$zindex) {
+	position:absolute;
+	top     :$top;
+	right   :$right;
+	bottom  :$bottom;
+	left    :$left;
+	z-index :$zindex;
+	@content;
+	//content是可將在mixin裏面的變數額外寫例外的css並覆蓋原本在mixin裡面的css
+	//但其實好像也不用另外寫...因為直接寫在@include外層就好...
+}
+
