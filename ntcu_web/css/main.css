@@ -1640,7 +1640,8 @@ html[xmlns] .clearfix {
   .swiperNews .swiper-slide {
     background: #fff;
     padding: 65px 40px 40px;
-    border-right: 1px solid #f8f8f8; }
+    border-right: 1px solid #f8f8f8;
+    width: 33.33%; }
     .swiperNews .swiper-slide h2 {
       font-size: 1.1rem;
       font-weight: bold;
@@ -1716,6 +1717,10 @@ html[xmlns] .clearfix {
       width: 100%; }
   .swiperNews .news-prev {
     right: 45px; } }
+
+@media screen and (max-width: 600px) {
+  .swiperNews .swiper-slide {
+    width: 100%; } }
 
 .swiperVideo {
   padding: 90px 0 100px;
