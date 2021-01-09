@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="153px" height="461px" viewBox="0 0 153 461" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 21 Copy 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <pattern id="pattern-1" width="17" height="17" x="-17" y="-17" patternUnits="userSpaceOnUse">
+            <use xlink:href="#image-2"></use>
+        </pattern>
+        <image id="image-2" width="17" height="17" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAAXNSR0IArs4c6QAAAJJJREFUOBGl080NgCAMBlBgJHfxZJxCx9ApPBl3cSTUD1OBAAKlB37l0QDKcx8u4YZSc9dvqztE7fMYJ6H1Qn2qFTVMzQCwziJMwCINwIs0AkAkilikDjH49kkiitQAuMkAqQWQmYdwAA/hAh/SAhikFQCiYv8CJrzIvCX77L1VTicDIIl/pADAdmmkEEgjFQCQGzN0eDWdaryvAAAAAElFTkSuQmCC"></image>
+    </defs>
+    <g id="總監操刀" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Rectangle-21-Copy-4" fill="url(#pattern-1)" points="0 461 9.77546734e-14 0 153 2.42544672e-14"></polygon>
+    </g>
+</svg>
