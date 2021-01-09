@@ -1469,8 +1469,7 @@ html[xmlns] .clearfix {
   transition: .5s; }
 
 .deco-yellow {
-  position: relative;
-  margin-top: 100px; }
+  position: relative; }
   .deco-yellow:before {
     content: '';
     background: #FDD600;
