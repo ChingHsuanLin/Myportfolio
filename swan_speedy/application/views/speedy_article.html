@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="title" content="設計立吞">
+	<meta name="description" content="設計立吞">
+	<meta name="Copyright" content="© 2019 白天鵝設計行銷">
+	<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes"/>
+	
+	<title>設計立吞</title>
+	<link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<script type="text/javascript" src="../../js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="../../js/jquery.nav.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/event_speedy.css">
+	<link rel="stylesheet" href="../../css/unreset.css">
+</head>
+<body class="">
+<div class="l-menu_mobile">
+    <div class="o-grid__item">
+        <button class="c-hamburger c-hamburger--htx">
+            <span>toggle menu</span>
+        </button>
+    </div>
+</div>
+
+
+<div class="l-menu">
+    <a href="speedy_index.html" class="l-logo" id="logo">
+        <h1><img src="../../img/logo.png" alt="設計立吞"></h1>
+    </a>
+    
+    <div class="l-menu_iconbox">
+        <a href="#" class="l-menu_icon"><img src="../../img/icon_fb.svg" alt=""></a>
+        <a href="#" class="l-menu_icon"><img src="../../img/icon_line.svg" alt=""></a>
+        <a href="#" class="l-menu_icon"><img src="../../img/icon_wechat.svg" alt=""></a>
+    </div>
+    <div class="l-menu_item">
+        <ul>
+            <li><a href="speedy_index.html" class="">設計立吞</a></li>
+            <li><a href="speedy_about.html" class="l-menu_item--active">活動說明</a></li>
+            <li><a href="speedy_form.html" class="">我要報名</a></li>
+        </ul>
+    </div>
+</div>
+<script>
+//漢堡
+$(window).load(function(){
+    var toggles = document.querySelectorAll(".c-hamburger");
+    for (var i = toggles.length - 1; i >= 0; i--) {
+        var toggle = toggles[i];
+        toggleHandler(toggle);
+    };
+    function toggleHandler(toggle) {
+        toggle.addEventListener( "click", function(e) {
+            e.preventDefault();
+            if (this.classList.contains("is-active") === true) {
+                this.classList.remove("is-active");
+                // $(".side-nav-wrap").stop().animate({left:"-250px"},500);//點漢堡側邊欄左右滑動
+                $(".l-menu_item").slideUp();
+            }
+            else {
+                this.classList.add("is-active");
+                // $(".side-nav-wrap").stop().animate({left:"0"},500);//點漢堡側邊欄左右滑動
+                $(".l-menu_item").slideDown();
+
+            }
+        });
+    }
+
+});
+
+//漢堡視窗resize
+$(window).resize(function(){
+    var w_Width = $(window).width();
+    if( w_Width < 780){
+      //點擊a選單消失 
+      $('.l-menu_item a').on('click',function(){
+        $(".l-menu_item").hide();
+        $(".c-hamburger").removeClass("is-active");
+    });
+
+  }
+  else{
+     $('.l-menu_item a').on('click',function(){
+      $(".l-menu_item").show();
+  });
+
+ }
+ if( w_Width >= 780){
+    $('.l-menu_item').removeAttr('style');
+    $('.c-hamburger').removeClass('is-active');
+}
+});
+
+
+
+
+
+
+</script>
+
+
+
+<!--  設計立吞 關於我們 -->
+
+<div class="l-wrapbox">
+	<div class="l-wrap">
+		<div class="company-box">
+			<div class="company-cont">
+				<img src="../../img/sample/designer2.jpg" alt="">
+				<div class="border"></div>
+				<div class="company-info">
+					<h2>白天鵝設計工程有限公司</h2>
+					<h3>黑小天 設計師</h3>
+					<p>室內是建築的靈魂，是人與環境的聯繫，是人類藝術與物質文明的結合。</p>
+				</div>
+				<a href="" class="company-add">
+					<span class="icon-x"></span>
+					<p>加入比較</p>
+				</a>
+			</div>
+		</div>
+
+		
+		<div class="c-tab-wrap">
+			<a href="speedy_company.html" class="c-tab" target="_blank">關於我們</a>
+			<a href="speedy_case.html" class="c-tab" target="_blank">設計案例</a>
+			<div class="c-tab c-tab--active" >設計文章</div>
+		</div>
+
+		<div class="c-item-wrap c-item--bgnone">
+			<div class="c-item">
+				<a href="#">
+					<div class="c-item-square">
+						<img src="../../img/sample/article1.png" alt="">
+					</div>
+					<h3>Tiffany色調的鄉村浪漫</h3>
+				</a>
+			</div>
+			<div class="c-item">
+				<a href="#">
+					<div class="c-item-square">
+						<img src="../../img/sample/article2.png" alt="">
+					</div>
+					<h3>Tiffany色調的鄉村浪漫</h3>
+				</a>
+			</div>
+			<div class="c-item">
+				<a href="#">
+					<div class="c-item-square">
+						<img src="../../img/sample/article3.png" alt="">
+					</div>
+					<h3>Tiffany色調的鄉村浪漫</h3>
+				</a>
+			</div>
+			<div class="c-item">
+				<a href="#">
+					<div class="c-item-square">
+						<img src="../../img/sample/article1.png" alt="">
+					</div>
+					<h3>Tiffany色調的鄉村浪漫</h3>
+				</a>
+			</div>
+			<div class="c-item">
+				<a href="#">
+					<div class="c-item-square">
+						<img src="../../img/sample/article2.png" alt="">
+					</div>
+					<h3>Tiffany色調的鄉村浪漫</h3>
+				</a>
+			</div>
+			<div class="c-item">
+				<a href="#">
+					<div class="c-item-square">
+						<img src="../../img/sample/article3.png" alt="">
+					</div>
+					<h3>Tiffany色調的鄉村浪漫</h3>
+				</a>
+			</div>
+
+		</div>
+		<div class="c-btn-box h-maT30">
+			<a class="c-btn c-btn--border" >
+				<span>看更多</span>
+			</a>
+		</div>
+		<div class="c-btn-flex h-maT30">
+			<a href="speedy_about.html" class="c-btn">
+				<span>活動說明</span>
+			</a>
+			<a href="speedy_form.html" class="c-btn">
+				<span>我要報名</span>
+			</a>
+		</div>
+		
+		
+
+		
+	</div>
+
+	
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+	$(window).load(function(){
+
+		//打開lightbox和背景黑
+		$('.article').on('click',function(){
+			$('.lightbox_wrap , .mask').fadeIn(500);
+			$('body').addClass('noscroll');
+		});
+
+		//警告lightbox關閉
+		$('.close-btn').on('click',function(){
+			$('.c-lightbox-wrap').fadeOut(500);
+		});
+
+		
+
+
+
+	});
+
+
+
+
+
+
+</script>
+
+
+<!-- template footer -->
+
+
+<div class="gotop" id="top">
+	<span class="icon-chevron-up"></span>
+</div>
+<a href="speedy_vs.html" class="icon-vs">
+	<span class="icon-x"></span>
+</a>
+
+
+<footer>
+	<ul class="l-footer">
+		<li>
+			<a href="">
+				<img src="../../img/icon_fb_b.svg" alt="">
+			</a>
+			<a href="">
+				<img src="../../img/icon_line_b.svg" alt="">
+			</a>
+			<a id="wechat">
+				<img src="../../img/icon_wechat_b.svg" alt="">
+			</a>
+		</li>
+		<li>
+			<img src="../../img/icon_logo.svg" alt="">
+			<p>Copyright © 白天鵝設計行銷 All Rights Reserved.</p>
+		</li>
+		<li>
+			<a href="">免責聲明</a>
+			<span></span>
+			<a href="">服務條款</a>
+			<span></span>
+			<a href="">隱私權聲明</a>
+		</li>
+	</ul>
+</footer>	
+
+
+<div class="wechat_LB" style="display: none;">
+	<span class="icon-x"></span>
+	<h4>微信扫一扫：加好友</h4>
+	<p>打开微信，点击「发现」→「扫描二维码」。</p>
+	<div class="qrcode">
+		<img alt="Scan me!" src="data:image/png;base64,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" style="display: block;">
+	</div>
+</div>
+
+</body>
+</html>
+
+<script> 
+
+	//gotop
+	$('.gotop').on('click',function(){
+		$('html,body').animate({ scrollTop: 0},'slow');
+	});
+	//icon列表出現
+	$('.icon_share').unbind('click');
+	$(document).on('click','.icon_share',function(){
+		if($('.icon_shareList').is(":hidden"))
+		{
+			$('.icon_shareList').slideToggle("slow");
+			$('.share').attr("src","../../img/icon_deleat.svg");
+			$('.icon_about').animate({bottom:"345px"},600);
+			$('.icon_aboutCont').css("bottom","180px" )
+		}
+		else
+		{
+			$('.icon_shareList').slideToggle("slow");
+			$('.share').attr("src","../../img/icon_share.svg");
+			$('.icon_about').animate({bottom:"180px"},600);
+			$('.icon_aboutCont').css("bottom","20px")
+		}
+		 
+	});
+
+	//icon_aboutCont
+	$('.icon_about').on('click',function(){
+		$('.icon_aboutCont').fadeIn(500);
+	});
+	$('.icon-x').on('click',function(){ 
+		$('.icon_aboutCont').fadeOut(500);
+	});
+
+	//wechat
+	$('#wechat').on('click',function(){
+		$('.wechat_LB , .mask').fadeIn(500);
+		$('body').addClass('noscroll');
+	});
+
+	$('.icon-x').on('click',function(){ 
+		$('#wechat').fadeOut(500);
+		$('body').removeClass('noscroll');
+	});
+
+</script>
