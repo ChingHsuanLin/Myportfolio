@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="371px" viewBox="0 0 1440 371" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 9 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1440" height="381"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-9-Copy" transform="translate(0.000000, -5.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask"></g>
+            <g id="Group-9" mask="url(#mask-2)" stroke-width="0.415">
+                <g transform="translate(-350.000000, 6.000000)">
+                    <path d="M286,83.9787834 C466.174746,224.696363 776.886807,275.590126 989.189291,187.198287 C1201.49347,98.8064482 1517.91234,-81.8654791 1817,85.6689571" id="Stroke-1" stroke="#6C257C"></path>
+                    <path d="M0,353.951191 C317.133963,412.152471 626.583402,348.691127 927.73466,175.550024 C1224.26796,5.06534795 1514.61124,-31.6886948 1802,24.3619015" id="Stroke-3" stroke="#FECC00"></path>
+                    <path d="M306,223.323403 C575.372075,325.122708 859.913478,272.495169 1084.09073,165.96569 C1309.80897,58.7032856 1587.20872,21.8114079 1817,120.61326" id="Stroke-5" stroke="#ED7203"></path>
+                    <path d="M313,91 C545.431929,205.510017 831.788759,224.358473 1022.12554,165.482759 C1294.49202,81.2349738 1651.83756,68.0772596 1966,199" id="Stroke-7" stroke="#C20B6F"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

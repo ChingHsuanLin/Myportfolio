@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!-- html meta 屬性設定 -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="title" content="水無痕玻尿酸">
+	<meta name="description" content="水無痕玻尿酸">
+	<meta name="Copyright" content="© 2020 水無痕玻尿酸">
+
+    <!-- 設定給手機device用 -->
+	<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes"/>
+
+	<title>水無痕玻尿酸</title>
+	<!-- 網頁頁籤上的icon -->
+	<link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<script type="text/javascript" src="../../js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="../../js/jquery.flip.js"></script>
+	<script type="text/javascript" src="../../js/jquery.nav.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+	<script src="../../js/wow.js"></script>
+
+    <link rel="stylesheet" href="../../css/animate.min.css">
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+<!-- {template header} -->
+
+
+
+<div class="l-menu_mobile">
+    <div class="o-grid__item">
+        <button class="c-hamburger c-hamburger--htx">
+            <span>toggle menu</span>
+        </button>
+    </div>
+</div>
+
+<div class="l-menu">
+    <a href="index.html" class="l-logo" id="logo">
+      <h1><img src="../../img/logo.svg" alt="水無痕玻尿酸"></h1>
+    </a>
+    <div class="l-menu_item">
+        <ul>
+            <li><a href="#page1" class="l-purple">產品介紹</a></li>
+            <li><a href="#page2" class="l-orange">CPM專利技術</a></li>
+            <li><a href="#page3" class="l-pink">四大優勢</a></li>
+            <li><a href="#page4" class="l-yellow">劑型介紹</a></li>
+            <li><a href="#page5" class="l-purple">常見問題</a></li>
+            <li><a href="#page6" class="l-orange">部落客分享</a></li>
+            <li><a href="https://www.facebook.com/LetUsInspireYouTW/" class="l-menu-icon"  target="_blank">
+              <img src="../../img/icon_fb.svg" alt="fb">
+            </a></li>
+            <li><a href="https://www.instagram.com/let.us.inspire.you.tw/" class="l-menu-icon"  target="_blank">
+              <img src="../../img/icon_ig.svg" alt="ig">
+            </a></li>
+        </ul>
+         <a href="map.html" class="l-menu_link">立即洽詢</a>
+    </div>
+</div>
+
+<script>
+//漢堡
+$(window).load(function(){
+    var toggles = document.querySelectorAll(".c-hamburger");
+    for (var i = toggles.length - 1; i >= 0; i--) {
+        var toggle = toggles[i];
+        toggleHandler(toggle);
+    };
+    function toggleHandler(toggle) {
+        toggle.addEventListener( "click", function(e) {
+            e.preventDefault();
+            if (this.classList.contains("is-active") === true) {
+                this.classList.remove("is-active");
+                // $(".side-nav-wrap").stop().animate({left:"-250px"},500);//點漢堡側邊欄左右滑動
+                $(".l-menu_item").slideUp();
+            }
+            else {
+                this.classList.add("is-active");
+                // $(".side-nav-wrap").stop().animate({left:"0"},500);//點漢堡側邊欄左右滑動
+                $(".l-menu_item").slideDown();
+
+            }
+        });
+    }
+
+
+  if($(window).width() < 1024)
+  {
+    //點擊a選單消失 
+      $('.l-menu_item a').on('click',function(){
+        $(".l-menu_item").hide();
+        $(".c-hamburger").removeClass("is-active");
+      });
+    
+  } else {
+
+    $('.l-menu_item a').on('click',function(){
+          $(".hl-menu_item").show();
+        });
+  }
+
+  
+  $('#logo').on('click',function(){
+      $('html,body').animate({ scrollTop: 0},'slow');
+    });
+
+
+
+});
+
+//漢堡視窗resize
+$(window).resize(function(){
+    var w_Width = $(window).width();
+    if( w_Width < 1024){
+      //點擊a選單消失 
+      $('.l-menu_item a').on('click',function(){
+        $(".l-menu_item").hide();
+        $(".c-hamburger").removeClass("is-active");
+      });
+
+    }
+    else{
+       $('.l-menu_item a').on('click',function(){
+          $(".l-menu_item").show();
+        });
+
+    }
+    if( w_Width >= 1024){
+        $('.l-menu_item').removeAttr('style');
+        $('.c-hamburger').removeClass('is-active');
+    }
+});
+
+
+
+  // 捲軸滾動，選單跟著動
+  $('.l-menu_item ul').onePageNav({
+      currentClass: 'header-list--activ',
+      changeHash: false,
+      scrollSpeed: 750,
+      scrollThreshold: 0.1,
+      filter: '',
+      easing: 'swing',
+      begin: function() {
+      },
+      end: function() {
+      },
+      scrollChange: function($currentListItem) {
+      }
+    });
+
+
+
+</script>
+
+
+
+<div class="l-gotop" id="top">
+	<span class="icon-chevron-up"></span>
+</div>
+
+<a class="l-clinic" href="map.html">
+	<img src="../../img/clinic.svg" alt="療程諮詢，搜尋診間">
+</a>
+
+<div class="c-wrap">	
+	<div class="video">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/3IvlVbtOTxU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+<!--產品介紹-->
+<div id="page1" class="intro_page">
+	<div class="slogn_tit">
+		<img src="../../img/slogn.svg" alt="美得自然簡單" class="wow bounceInLeft">
+	</div>
+	<div class="intro_wrap">
+		<div class="intro_img wow bounceInRight" data-wow-delay=".3s">
+			<img src="../../img/model1.png" alt="美麗大使周曉涵">
+		</div>
+		<img src="../../img/product1.png" alt="水無痕玻尿酸" class="slogn slogn_product">
+		<div class="slogn slogn_pink wow bounceInLeft" data-wow-delay=".8s">
+			<img src="../../img/slogn2.svg" alt="我，可以完美詮釋！">
+		</div>
+		<div class="slogn slogn_yellow wow bounceInRight" data-wow-delay="1.3s">
+			<img src="../../img/slogn3.svg" alt="不化妝依然自信亮眼">
+		</div>
+		<div class="slogn slogn_orange  wow bounceInRight" data-wow-delay="1.5s">
+			<img src="../../img/slogn4.svg" alt="姐的美就是自然迷人">
+		</div>
+		<div class="slogn slogn_sign">
+			<img src="../../img/signature.svg" alt="美麗大使周曉涵">
+		</div>
+	</div>
+	<div class="c-wrap-w h-bgYellow">
+		<div class="c-wrap intro_wrap2">
+			<div class="intro_effect">
+				<h2><span>可預期之效果</span></h2>
+				<div class="swiper-container swiperIntro">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<h3>眼周區</h3>
+							<ul>
+								<ol>
+									<img src="../../img/effect1_before.png" alt="眼周區BEFORE">
+									<p>NG</p>
+								</ol>
+								<ol>
+									<img src="../../img/effect1_after.png" alt="眼周區AFTER">
+									<p>OK</p>
+								</ol>
+							</ul>
+						</div>
+						<div class="swiper-slide">
+							<h3>法令紋</h3>
+							<ul>
+								<ol>
+									<img src="../../img/effect2_before.png" alt="法令紋BEFORE">
+									<p>BEFORE</p>
+								</ol>
+								<ol>
+									<img src="../../img/effect2_after.png" alt="法令紋AFTER">
+									<p>AFTER</p>
+								</ol>
+							</ul>
+						</div>
+						<div class="swiper-slide">
+							<h3>抬頭紋</h3>
+							<ul>
+								<ol>
+									<img src="../../img/effect3_before.png" alt="抬頭紋BEFORE">
+									<p>BEFORE</p>
+								</ol>
+								<ol>
+									<img src="../../img/effect3_after.png" alt="抬頭紋AFTER">
+									<p>AFTER</p>
+								</ol>
+							</ul>
+						</div>
+						
+					</div>
+					<!-- Add Arrows -->
+					<div class="swiper-button-next intro-next"></div>
+					<div class="swiper-button-prev intro-prev"></div>
+				</div>
+				<ul>
+					<p>注意事項：</p>
+					<li>該部位之注射僅能由受過訓練、有經驗、非常瞭解解剖構造的醫師來進行，無預先培訓前，不建議將本品注射至眶周區。像所有填充劑一樣由於注射至這一敏感區域可能提高副作用與不良事件之發生率與嚴重性，導致輕度組織壞死，眉間區域注射時應非常謹慎。</li>
+					<li>療效可能因個案不同有所差異。使用前請務必詳閱原廠之使用說明書並遵照指示使用。</li>
+				</ul>
+			</div>
+			<div class="product_img  wow bounceInRight">
+				<img src="../../img/product1.png" alt="水無痕玻尿酸">
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--CPM專利技術-->
+<div id="page2">
+	<div class="c-wrap CPM_wrap">
+		<h2 class="wow bounceInLeft">
+			<img src="../../img/tit_3in1.svg" alt="3in1">
+			<p>CPM <span>專利</span>技術</p>
+		</h2>
+		<div>
+			<div class="CPM_txt">
+				<ul class="CPM_table">
+					<div>
+						<div>特性</div>			
+						<div>優勢</div>
+					</div>
+					<li>
+						<h2>內聚性</h2>
+						<h3>凝膠聚合再一起保持完整的能力</h3>
+						<h4>凝膠能抱持其結構，凝聚力強，再注射後不會斷裂，與組織融合度佳，因此適合淺層注射或經常活動的部位。</h4>
+					</li>
+					<li>
+						<h2>回彈性</h2>
+						<h3>凝膠經拉扯後恢復原狀的能力</h3>
+						<h4>能抵擋多重三維變形，帶來自然的填充效果。</h4>
+					</li>
+					<li>
+						<h2>可塑性</h2>
+						<h3>凝膠成型的能力</h3>
+						<h4>可以塑形以符合臉部輪廓，並與組織有平順的接合使效果自然。</h4>
+					</li>
+				</ul>
+				<img src="../../img/product3.png" alt="與皮膚有絕佳融合效果">
+			</div>
+			<div class="CPM_img wow bounceInRight">
+				<img src="../../img/model2.png" alt="周曉涵">
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--四大優勢-->
+<div id="page3">
+	<div class="c-wrap advantage_wrap">
+		<div class="advantage_txt">
+			<div class="advantage_img wow bounceInLeft">
+				<img src="../../img/model3.png" alt="周曉涵">
+			</div>
+			<ul>
+				<h2><span>4</span>大優勢</h2>
+				<li class="wow bounceIn" data-wow-delay=".5s">
+					<h3>1.更能撫平細紋<code>1,2</code></h3>
+					<p>水無痕玻尿酸的 CPM (Cohesive Polydensiﬁed Matrix)專利技術克服施打凹凸不平的這項缺點，透過泛白技術，使玻尿酸與肌膚自然融合。</p>
+				</li>
+				<li class="wow bounceIn" data-wow-delay="1s">
+					<h3>2.不用擔心騰德爾效應</h3>
+					<p>水無痕玻尿酸系列可細緻的處理眼睛部位，減少老化。避免在眼周引起團塊(像毛毛蟲一般)及泛藍光的「騰德爾效應 (tyndall effect)」（騰德爾效應是因為光線被含有懸浮膠體顆粒的玻尿酸所散射，泛出亮白藍光）</p>
+				</li>
+				<li class="wow bounceIn" data-wow-delay="1.5s">
+					<h3>3.加強塑形效果</h3>
+					<p>專利 CPM 技術研發出的玻尿酸可客製化雕塑，修飾臉部線條，不用擔心走山或位移，能與臉部組織完美融合。</p>
+				</li>
+				<li class="wow bounceIn" data-wow-delay="2s">
+					<h3>4.不用擔心疼痛問題<code>*</code></h3>
+					<p>含有利多卡因，能有效降低疼痛</p>
+				</li>
+			</ul>
+
+		</div>	
+		<div class="h-note-flex">
+			<span>1.</span>
+			<p>Micheels P, Besse S, Flynn TC, et al. Superficial dermal injection of hyaluronic acid soft tissue fillers: comparative ultrasound study. Dermatol Surg. 2012 Jul;38(7 Pt 2):1162-9.</p>
+		</div>
+		<div class="h-note-flex">
+			<span>2.</span>
+			<p>Prager W, Kerscher M. Investigator and subject satisfaction: results from a randomized, evaluator-blinded, split-face study. Podium presentation at 5CC Conference, Cannes, France (September 3, 2015- September 6, 2015). </p>
+		</div>
+		<div class="h-note-flex">
+			<p>* 水無痕玻尿酸含利多卡因。</p>
+		</div>
+	</div>
+</div>
+
+<!--劑型介紹-->
+<div id="page4">
+	<div class="c-wrap effort_wrap">
+		<img src="../../img/tit_effort.svg" alt="水無痕玻尿酸" class="wow bounceInLeft">
+		<p>如果您希望填充劑可與肌膚完美融合，帶來自然的效果，協助減齡，水無痕玻尿酸系列是您的最佳首選。</p>
+		<div class="effort">
+			<img src="../../img/model5.png" alt="周曉涵" class="effort_img">
+			<div class="card card_yellow wow zoomIn" data-wow-delay=".5s">
+				<div id="card1">
+					<img src="../../img/effort_soft_txt.svg" alt="SOFT">
+					<div class="effort_box front">
+						<img src="../../img/effort_soft.png" alt="柔軟型">
+					</div>
+					<div class="effort_txt h-yellow back">
+						<p>柔軟型</p>	
+						<span class="icon-chevron-right"></span>
+					</div>
+				</div>
+			</div>
+			<div class="card card_pink wow zoomIn"  data-wow-delay=".5s">
+				<div id="card2">
+					<img src="../../img/effort_intense_txt.svg" alt="INTENSE">
+					<div class="effort_box front">
+						<img src="../../img/effort_intense.png" alt="加強型">
+					</div>
+					<div class="effort_txt h-pink back">
+						<p>加強型</p>	
+						<span class="icon-chevron-right"></span>
+					</div>
+				</div>
+			</div>
+			<div class="card card_orange wow zoomIn"  data-wow-delay="1s">
+				<div id="card3">
+					<img src="../../img/effort_balance_txt.svg" alt="balance">
+					<div class="effort_box front">
+						<img src="../../img/effort_balance.png" alt="平衡型">
+					</div>
+					<div class="effort_txt h-orange back">
+						<p>平衡型</p>	
+						<span class="icon-chevron-right"></span>
+					</div>
+				</div>
+			</div>
+			<div class="card card_purple wow zoomIn"  data-wow-delay="1.2s">
+				<div id="card4">
+					<img src="../../img/effort_volume_txt.svg" alt="volume">
+					<div class="effort_box front">
+						<img src="../../img/effort_volume.png" alt="豐盈型">
+					</div>
+					<div class="effort_txt h-purple back">
+						<p>豐盈型</p>	
+						<span class="icon-chevron-right"></span>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+		<!-- <div id="card"></div> -->
+		
+	</div>
+</div>
+
+<!--常見問題-->
+<div id="page5">
+	<div class="c-wrap">
+		<img src="../../img/tit_qa.svg" alt="常見問題" class="qa_img">
+	</div>
+	<div class="c-wrap-w h-bgYellow">
+		<div class="c-wrap qa_wrap">
+			<div class="qa_model wow bounceInLeft">
+				<img src="../../img/model4.png" alt="周曉涵">
+			</div>
+			<ul class="qa_box">
+				<div>
+					<li>
+					<div class="num">01</div>
+					<h2>水無痕玻尿酸與其他玻尿酸產品有何不同?</h2>
+					<p>水無痕玻尿酸有平衡完美的流變屬性，因此能與皮膚組織無縫融合，帶來可預測且協調的效果。過去玻尿酸施打在表淺真皮層容易凹凸不平，有時甚至會看到產品施打痕跡，撫平細紋的效果不佳。水無痕玻尿酸擁有CPM專利技術，內聚性高可預期玻尿酸與皮膚的結合力強，醫師可運用泛白技術，施打在表淺真皮層，達到與肌膚自然貼合的效果。</p>
+					</li>
+					<li>
+						<div class="num">02</div>
+						<h2>水無痕玻尿酸能處理哪些皺紋?表情會改變嗎?</h2>
+						<p>水無痕玻尿酸不僅能處理動態或靜態紋路，並可以填補臉部的凹陷，達到豐盈飽滿的效果。療程過後氣色看起來會變好、更有精神，且依然能做自己展現各種表情。</p>
+					</li>
+				</div>
+				<div>
+					<li>
+						<div class="num">03</div>
+						<h2>療程後多久可以見效?打完可以立刻回去工作嗎?</h2>
+						<p>通常療效是立即的，不需任何後續的休息時間，大多數的患者在單次療程後可以立即繼續日常活動。</p>
+					</li>
+					<li>
+						<div class="num">04</div>
+						<h2>施打玻尿酸會有副作用*嗎?</h2>
+						<p>所有的玻尿酸療程都可能在注射期間輕微的出血，並在注射結束時自然消失。在少數情況下可能會短暫出現皮膚紅腫、點狀出血或瘀青，但這些現象皆為暫時性的，通常幾天內就會消失。在療程前您的醫師會再詳細說明。</p>
+						<div class="h-note-flex">
+							*詳細警語、注意事項、副作用及禁忌症情參閱中文仿單
+						</div>
+					</li>
+				</div>
+				
+			</ul>
+		</div>
+		
+	</div>
+</div>
+
+<!--部落客分享-->
+<div id="page6">
+	<div class="c-wrap blog_wrap">
+		<h2>美麗<span>分享</span></h2>
+		<ul class="blog_ul">
+			<li class="">
+				<div class="blog_img wow bounceIn">
+					<img src="../../img/blog2.png" alt="哈娜Hannas S.">
+				</div>
+				<div class="blog_txt">
+					<h3>自然無痕美麗不費力～水無痕玻尿酸心得評價分享</h3>
+					<p>小小進廠維修進度報告🙈<br>
+						最近覺得素顏氣色都變好了，平常上班都不用化妝😎<br>
+						這次進廠維修的項目是水無痕玻尿酸！！！...
+						</p>
+					<div class="open_LB open_LB2" id="open_LB2">VIEW ALL</div>
+				</div>
+				
+			</li>
+			<li class="">
+				<div class="blog_txt blog_txt2">
+					<h3>告別眼周毛毛蟲！水無痕玻尿酸，讓美麗豪不費力！</h3>
+					<p>我因為淚溝很深的關係😭<br>
+						每隔一至兩年都會做玻尿酸填補<br>
+						所以我也算是玻尿酸注射的老手了！...
+							</p>
+					<div class="open_LB open_LB1" id="open_LB1">VIEW ALL</div>
+				</div>
+				<div class="blog_img  wow bounceIn">
+					<img src="../../img/blog1.png" alt="Amber迷你馬的逆襲">
+				</div>
+			</li>
+			
+		</ul>
+	</div>
+</div>
+
+
+<div class="h-mask" style="display:none;"></div>
+
+<!--LB-->
+<div class="lb_wrap lb_wrap1"  style="display:none;">
+	<div class="close-btn"><span class="icon-x"></span></div>
+	<h2>告別眼周毛毛蟲！水無痕玻尿酸，讓美麗豪不費力！</h2>
+	<div class="blog_face">
+		<img src="../../img/blog1.png" alt="Amber迷你馬的逆襲">
+	</div>
+	<p>我因為淚溝很深的關係😭<br>
+		每隔一至兩年都會做玻尿酸填補<br>
+		所以我也算是玻尿酸注射的老手了！<br>
+		但傳統玻尿酸還是有一些小缺點<br>
+		例如聚合性不夠，注射後容易散掉位移、<br>
+		剛注射完時，摸起來還會有團塊等等...<br>
+		但現在科技真的是太厲害了！ <br>
+		今天要跟大家分享的主角──<br>
+		✨水無痕玻尿酸✨<br>
+		專利技術不但能夠和肌膚完美融合<br>
+		而且高凝聚力的塑形效果更佳<br>
+		不用擔心走山或位移的情況！ <br>
+		而且我以往注射完玻尿酸後<br>
+		通常前三天都會有點發炎發紅現象<br>
+		這次注射完竟然完全不會耶！👍<br>
+		有了這次美好的經驗之後<br>
+		和水無痕玻尿酸針的相見恨晚啊！<br>
+		有計畫要進行微整注射的女孩們<br>
+		可以參考看看囉！❤️<br>
+		而這次幫我注射的是<br>
+		美麗爾忠孝店的陳美齡醫師！🎉<br>
+		她是台灣十大玻尿酸注射醫師唷！<br>
+		經驗非常的豐富！👍👍<br>
+		同時也是眼科專科醫師<br>
+		讓陳醫師施打眼周讓我很安心！<br>
+		不但安撫的聲音超溫柔<br>
+		也可以感覺到陳醫師手法的熟練<br>
+		無論是進針時還是填補中的微調<br>
+		都非常的精準又溫柔❤️<br>
+		真的不愧是經驗豐富的醫師呢！<br>
+		部落文全文這邊請~<a href="https://minima.tw/belotero/" target="_blank">https://minima.tw/belotero/</a><br>
+		#水無痕玻尿酸　#美麗不費力　#自然無痕　#EffortlesslyMe　#水無痕玻尿酸　<br>
+		水無痕玻尿酸：<a href="https://effortlesslyme.info/" target="_blank">https://effortlesslyme.info/</a><br>
+		美麗爾診所：<a href="http://www.merrier.com.tw/" target="_blank">http://www.merrier.com.tw/</a><br>
+		原文網址：<a href="https://www.facebook.com/amber1013/posts/2289405341141089" target="_blank">https://www.facebook.com/amber1013/posts/2289405341141089</a>
+	</p>
+	<img src="../../img/blog1_1.jpg" alt="玻尿酸心得">
+	<img src="../../img/blog1_2.jpg" alt="玻尿酸心得">
+	<img src="../../img/blog1_3.jpg" alt="玻尿酸心得">
+	<img src="../../img/blog1_4.jpg" alt="玻尿酸心得">
+	<img src="../../img/blog1_5.jpg" alt="玻尿酸心得">
+</div>
+
+<div class="lb_wrap lb_wrap2"  style="display:none;">
+	<div class="close-btn"><span class="icon-x"></span></div>
+	<h2>自然無痕美麗不費力～水無痕玻尿酸心得評價分享</h2>
+	<div class="blog_face">
+		<img src="../../img/blog2.png" alt="哈娜Hannas">
+	</div>
+	<p>小小進廠維修進度報告🙈<br>
+		最近覺得素顏氣色都變好了，平常上班都不用化妝😎<br>
+		這次進廠維修的項目是水無痕玻尿酸！！！<br>
+		完全零痛感無修復期，下班打完隔天照常美美上班哈～<br>
+		跟以前的玻尿酸真的差很多，與肌膚組織融合度好，效果超自然<br>
+		淚溝跟夫妻宮填補完之後氣色變得好好🤩<br>
+		大家快點進文章看更多心得吧👀 <a href="https://haje0617.pixnet.net/blog/post/227944190" target="_blank"></a><br>
+		#水無痕玻尿酸 #美麗不費力 #自然無痕 #EffortlesslyMe #水無痕玻尿酸<br>
+		<a href="https://effortlesslyme.info/" target="_blank">https://effortlesslyme.info/</a><br>
+		盧靜怡 #盧靜怡 #iskin #尚行美 #玻尿酸 #評價 <br>
+		<a href="https://www.iskin.com.tw" target="_blank">https://www.iskin.com.tw</a>/<br>
+		原文網址：<a href="https://www.facebook.com/1040096626035196/posts/2593169877394522/" target="_blank">https://www.facebook.com/1040096626035196/posts/2593169877394522/</a>
+	</p>
+	<img src="../../img/blog2_1.jpg" alt="玻尿酸心得">
+	<img src="../../img/blog2_2.jpg" alt="玻尿酸心得">
+	<img src="../../img/blog2_3.jpg" alt="玻尿酸心得">
+	<img src="../../img/blog2_4.jpg" alt="玻尿酸心得">
+	<img src="../../img/blog2_5.jpg" alt="玻尿酸心得">
+	
+</div>
+
+
+<div class="cookie-box">
+	<p>我們使用 cookie 來了解您如何使用我們的網站並改善您的體驗，包括個性化內容。 如繼續使用我們的網站，即表示您接受我們使用 cookies。</p>
+	<div class="agree">
+		<div>我同意</div>
+		<div>取消</div>
+	</div>
+</div>
+
+
+<script>
+	$(window).load(function(){
+
+		$('#top').on('click',function(){
+			$('html,body').animate({ scrollTop: 0},'slow');
+		});
+
+		//打開lightbox和背景黑
+		$('#open_LB1').on('click',function(){
+			$('.lb_wrap1 , .h-mask').fadeIn(500);
+			$('body').addClass('h-noscroll');
+		});
+		$('#open_LB2').on('click',function(){
+			$('.lb_wrap2 , .h-mask').fadeIn(500);
+			$('body').addClass('h-noscroll');
+		});
+
+		//lightbox關閉
+		$('.close-btn').on('click',function(){
+			$('.lb_wrap , .h-mask').fadeOut(500);
+			$('body').removeClass('h-noscroll');
+		});
+
+		//cookie關閉
+		$('.agree div').on('click',function(){
+			$('.cookie-box').hide();
+		});
+
+		var swiperIntro = new Swiper('.swiperIntro', {
+			slidesPerView: 1, 
+			spaceBetween: 0,
+			loop: true,
+			// pagination: {
+			// 	el: '.article-page',
+			// 	clickable: true,
+			// },
+			navigation: {
+				nextEl: '.intro-next',
+				prevEl: '.intro-prev',
+			}
+			
+		}); 
+
+		//卡片翻轉
+		$("#card1").flip();
+		$("#card2").flip();
+		$("#card3").flip();
+		$("#card4").flip();
+
+		//動畫
+		new WOW().init();
+		var wow = new WOW(
+  		{
+		    boxClass:'wow',// 要套用WOW.js縮需要的動畫class(預設是wow)
+		    animateClass: 'animated', // 要"動起來"的動畫(預設是animated, 因此如果你有其他動畫library要使用也可以在這裡調整)
+		    offset: 0, // 距離顯示多遠開始顯示動畫 (預設是0,因此捲動到顯示時才出現動畫)
+		    mobile:true,// 手機上是否要套用動畫 (預設是true)
+		    live: true, // 非同步產生的內容是否也要套用 (預設是true, 非常適合搭配SPA)
+		    callback: function(box) {
+		      // 當每個要開始時, 呼叫這裡面的內容, 參數是要開始進行動畫特效的element DOM
+		    },
+		    scrollContainer: null // 可以設定成只套用在某個container中捲動才呈現, 不設定就是整個視窗
+		  }
+		);
+		wow.init();
+
+	});
+
+</script>
