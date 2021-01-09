@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!-- html meta 屬性設定 -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 將使用ie瀏覽器的版本設定在預設，或是可以指定版本 ex:content="IE=8" -->
+
+	<meta name="title" content="新住民語文課程前導學校協作計畫">
+	<!-- <meta name="author" content="作者"> 如果不是新聞或blog類型的網站，基本上是不需要設定 -->
+	<!-- <meta name="keyword" content="關鍵字,關鍵字"> 不建議設定了，瀏覽器不會抓這裡，也不影響SEO -->
+	<meta name="description" content="新住民語文課程前導學校協作計畫">
+	<meta name="Copyright" content="© 2020國立台中教育大學">
+
+    <!-- 設定給手機device用 -->
+	<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes"/>
+	
+
+	<!-- Facebook og: 屬性設定 -->
+	<!-- <meta property="og:title" content="如果是文章就是文章的標題" />
+	<meta property="og:site_name" content="網站的名稱" />
+	<meta property="og:url" content="自定義分享連結的網址" />
+	<meta property="og:description" content="文章描述通常2~4句子" />
+	<meta property="og:image" content="呈現的圖片至少要1200x630"/>
+	<meta property="og:type" content="website" /> -->
+	<!-- https://developers.facebook.com/tools/debug (Facebook測試的og屬性的地方) -->
+
+	<title>新住民語文課程前導學校協作計畫</title>
+	<!-- 網頁頁籤上的icon -->
+	<link rel="shortcut icon" href="/img/favicon.ico">
+
+	<script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="/js/jquery.nav.js"></script>
+	<script src="/js/swiper.min.js"></script>
+
+    
+    <link rel="stylesheet" href="/css/swiper.min.css">
+    <link rel="stylesheet" href="/css/font.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/unreset.css">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+
+	<!--[if IE]>
+		<link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<![endif]-->
+
+	<!-- 讓ie9以下看懂htm5標簽 -->
+	<!--[if lte IE 8]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<!-- {template header} -->
+
+
+
+<div class="l-menu_mobile">
+  <div class="o-grid__item">
+    <button class="c-hamburger c-hamburger--htx">
+      <span>toggle menu</span>
+    </button>
+  </div>
+</div>
+
+<div class="l-menu">
+    <div class="l-menubar">
+      <!--  登入前的狀態 -->
+   <!--  <a href="login.html">登入</a>
+    /
+    <a href="sign_up.html">註冊</a> -->
+
+    <!--  登入後的狀態 -->
+      <a href="member.html">
+        <span class="icon-user"></span>
+        Hi,<span>Critical321</span>您好，會員中心</a>
+      /
+      <a href="#" class="h-opLight">登出</a>
+
+    </div>
+    <div class="l-menu_box">
+        <a href="index.html" class="l-logo" id="logo">
+          <h1><img src="/img/logo.gif" alt="新住民語文課程前導學校協作計畫"></h1>
+        </a>
+        <div class="l-menu_item">
+          <ul>
+            <!-- 當頁加上act -->
+            <li><a href="index.html" class="act">首頁</a></li>
+            <li><a href="news.html" class="">最新消息</a></li>
+            <li><a href="class.html" class="">研習課程</a></li>
+            <li><a href="event.html" class="">活動紀錄</a></li>
+            <li><a href="file.html" class="">語文教材</a></li>
+            <li><a href="" class="">悅趣式評估系統</a></li>
+            <li><a href="survey.html" class="">問卷</a></li>
+            <li><a href="public.html" class="">公開資料下載</a></li>
+            <li><a href="" class="">教學電子報</a></li>
+          </ul>
+        </div>
+    </div>  
+    
+</div>
+
+  <script>
+//漢堡
+$(window).load(function(){
+  var toggles = document.querySelectorAll(".c-hamburger");
+  for (var i = toggles.length - 1; i >= 0; i--) {
+    var toggle = toggles[i];
+    toggleHandler(toggle);
+  };
+  function toggleHandler(toggle) {
+    toggle.addEventListener( "click", function(e) {
+      e.preventDefault();
+      if (this.classList.contains("is-active") === true) {
+        this.classList.remove("is-active");
+                // $(".side-nav-wrap").stop().animate({left:"-250px"},500);//點漢堡側邊欄左右滑動
+                $(".l-menu_item").slideUp();
+                $('body').removeClass("h-noscroll");
+              }
+              else {
+                this.classList.add("is-active");
+                // $(".side-nav-wrap").stop().animate({left:"0"},500);//點漢堡側邊欄左右滑動
+                $(".l-menu_item").slideDown();
+                $('body').addClass("h-noscroll");
+              }
+            });
+  }
+
+
+  if($(window).width() < 1024)
+  {
+    //點擊a選單消失 
+    $('.l-menu_item a').on('click',function(){
+      $(".l-menu_item").hide();
+      $(".c-hamburger").removeClass("is-active");
+    });
+    
+  } else {
+
+    $('.l-menu_item a').on('click',function(){
+      $(".hl-menu_item").show();
+    });
+  }
+
+  
+  $('#logo').on('click',function(){
+    $('html,body').animate({ scrollTop: 0},'slow');
+  });
+
+
+
+});
+
+//漢堡視窗resize
+$(window).resize(function(){
+  var w_Width = $(window).width();
+  if( w_Width < 1024){
+      //點擊a選單消失 
+      $('.l-menu_item a').on('click',function(){
+        $(".l-menu_item").hide();
+        $(".c-hamburger").removeClass("is-active");
+      });
+
+    }
+    else{
+     $('.l-menu_item a').on('click',function(){
+      $(".l-menu_item").show();
+    });
+
+   }
+   if( w_Width >= 1024){
+    $('.l-menu_item').removeAttr('style');
+    $('.c-hamburger').removeClass('is-active');
+  }
+});
+
+
+
+
+
+
+</script>
+
+
+
+<div class="c-wrap-w deco-green-circle h-hidden">
+	<div class="c-wrap1020">
+		<ul class="c-breadcrumb">
+			<li>
+				<a href="index.html">首頁</a>
+			</li>
+			<li>
+				<a href="class.html">研習課程</a>
+			</li>
+			<li>北一區第二梯次前導學校期末經驗分享座談會</li>
+		</ul>
+
+		<div class="c-wrap-w">
+			<div class="c-cont-tit">北一區第二梯次前導學校期末經驗分享座談會</div>
+			<div class="h-orange">課程日期：2020-01-01~2020-01-01</div>
+			<article class="unreset h-mt30">
+				<p>為配合新課綱施行，國教署指出，107學年度將推動新住民語文課程前導計畫，分2梯次推動，前導學校遴選原則為邀請參與、指定參與及推薦參與，第一梯次自107年8月至108年1月，預計每縣市擇定1至3校，補助50校推行前導計畫。<br><br>
+					明年8月上路的12年國教新課綱納入新住民語文，教育部國教署推動縣市新住民語文課程前導學校示範教學，107學年第1學期有21縣市50所國小及2所國中63班參與，開設7國語文課程。屏東縣恆春國小開設越南等3種語言最多，校長鄭鴻博昨天指出，校內學新住民語的大部分都不是「新二代」，且家長很支持。<br><br>
+				12年國教課綱中，本土語文（含新住民語文）在國小必選、國中及高中則是選修。其中新住民語文以東南亞國家語文為主，包括越南、印尼、泰國、緬甸、柬埔寨、菲律賓及馬來西亞等7國官方語言。國小學生必須從本土語文及新住民語文中擇一必修，每周一節為原則；國中、高中階段則依學生需求於彈性課程開課。</p>
+				<img src="/img/sample/photo1.jpg" alt="">
+			</article>
+		</div>
+		
+		<div class="registration_wrap">
+			<div class="c-title">
+				<h2>Registration Form</h2>
+				<img src="/img/tit_deco.svg" alt="">
+				<p>我要報名</p>
+			</div>
+			<div class="registration_form">
+				<ul class="c-formShort">
+					<li>
+						<label for="" class="c-formShort-q">所屬縣市</label>
+						<div class="c-formShort-a">
+							<select class="c-select error">
+								<option value="">請選擇縣市</option>
+								<option value="基隆市">基隆市</option>
+								<option value="台北市">台北市</option>
+								<option value="新北市">新北市</option>
+								<option value="桃園市">桃園市</option>
+							</select>
+							<select class="c-select" name="" id="">
+								<option value="">請選擇行政區</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<label for="" class="c-formShort-q">服務單位</label>
+						<div class="c-formShort-a">
+							<select class="c-select" name="" id="">
+								<option value="">請選擇學校</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<label for="" class="c-formShort-q">姓名</label>
+						<div class="c-formShort-a">
+							<!-- <input type="text"  class="" placeholder=""> -->
+							<input type="text"  class="" placeholder="必填">
+						</div>
+					</li>
+					<li>
+						<label for="" class="c-formShort-q">職稱</label>
+						<div class="c-formShort-a">
+							<!-- <input type="text"  class="" placeholder=""> -->
+							<input type="text"  class="" placeholder="必填">
+						</div>
+					</li>
+					<li>
+						<label for="" class="c-formShort-q">身份別</label>
+						<div class="c-formShort-a">
+							<div class="c-radiobox">
+								<div class="c-radiobox-item">
+									<input type="radio" id="q2-1" for="" title="至少選擇一個" name="age" value="1">
+									<label for="q2-1">縣市政府承辦人</label>
+								</div>
+								<div class="c-radiobox-item">
+									<input type="radio" id="q2-2" for="" title="至少選擇一個" name="age" value="2">
+									<label for="q2-2">輔導團</label>
+								</div>
+								<div class="c-radiobox-item">
+									<input type="radio" id="q2-3" for="" title="至少選擇一個" name="age" value="3">
+									<label for="q2-3">縣市內國中小學代表</label>
+								</div>
+								<div class="c-radiobox-item">
+									<input type="radio" id="q2-4" for="" title="至少選擇一個" name="age" value="4">
+									<label for="q2-4">教學支援人員</label>
+								</div>
+								<div class="c-radiobox-item">
+									<input type="radio" id="q2-5" for="" title="至少選擇一個" name="age" value="5">
+									<label for="q2-5">教學指導教師</label>
+								</div>
+								<div class="c-radiobox-item">
+									<input type="radio" id="q2-6" for="" title="至少選擇一個" name="age" value="6">
+									<label for="q2-6">其他</label>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<label for="" class="c-formShort-q">電話</label>
+						<div class="c-formShort-a">
+							<input type="text"  class="" placeholder="">
+						</div>
+					</li>
+					<li>
+						<label for="" class="c-formShort-q">Email</label>
+						<div class="c-formShort-a">
+							<input type="text"  class="" placeholder="">
+						</div>
+					</li>
+					<li>
+						<label for="" class="c-formShort-q">參加場次(可複選)</label>
+						<div class="c-formShort-a">
+							<div class="more_checkbox">
+								<label for="am" class="c-checkbox">
+									<input type="checkbox" name="time" id="am" value="" class=""> 
+									<div class="c-checkbox-box"></div>
+									<span>上午場10:00~12:00</span>
+								</label>
+								<label for="pm" class="c-checkbox">
+									<input type="checkbox" name="time" id="pm" value="" class=""> 
+									<div class="c-checkbox-box"></div>
+									<span>下午場13:00~15:00</span>
+								</label>
+							</div>
+						</div>	
+					</li>
+					<li>
+						<label for="" class="c-formShort-q">餐點調查</label>
+						<div class="c-formShort-a">
+							<div class="c-radiobox">
+								<div class="c-radiobox-item">
+									<input type="radio" id="q3-1" for="" title="至少選擇一個" name="age" value="1">
+									<label for="q3-1">葷食</label>
+								</div>
+								<div class="c-radiobox-item">
+									<input type="radio" id="q3-2" for="" title="至少選擇一個" name="age" value="2">
+									<label for="q3-2">素食</label>
+								</div>
+								<div class="c-radiobox-item">
+									<input type="radio" id="q3-3" for="" title="至少選擇一個" name="age" value="3">
+									<label for="q3-3">不用餐</label>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<label for="" class="c-formShort-q">交通方式</label>
+						<div class="c-formShort-a">
+							<div class="c-radiobox">
+								<div class="c-radiobox-item">
+									<input type="radio" id="q4-1" for="" title="至少選擇一個" name="age" value="1">
+									<label for="q4-1">自行開車</label>
+								</div>
+								<div class="c-radiobox-item">
+									<input type="radio" id="q4-2" for="" title="至少選擇一個" name="age" value="2">
+									<label for="q4-2">客運</label>
+								</div>
+								<div class="c-radiobox-item">
+									<input type="radio" id="q4-3" for="" title="至少選擇一個" name="age" value="3">
+									<label for="q4-3">台鐵</label>
+								</div>
+								<div class="c-radiobox-item">
+									<input type="radio" id="q4-4" for="" title="至少選擇一個" name="age" value="3">
+									<label for="q4-4">高鐵</label>
+								</div>
+								<div class="c-radiobox-item">
+									<input type="radio" id="q4-5" for="" title="至少選擇一個" name="age" value="3">
+									<label for="q3-5">飛機</label>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<label for="" class="c-formShort-q">停車需求</label>
+						<div class="c-formShort-a">
+							<div class="c-radiobox">
+								<div class="c-radiobox-item">
+									<input type="radio" id="q5-1" for="" title="至少選擇一個" name="age" value="1">
+									<label for="q5-1">否</label>
+								</div>
+								<div class="c-radiobox-item">
+									<input type="radio" id="q5-2" for="" title="至少選擇一個" name="age" value="2">
+									<label for="q5-2">是</label>
+								</div>
+							</div>
+							<!-- <input type="text"  class="" placeholder="請輸入車牌號碼"> -->
+						</div>
+					</li>
+					<li>
+						<label for="" class="c-formShort-q">住宿需求</label>
+						<div class="c-formShort-a">
+							<div class="c-radiobox">
+								<div class="c-radiobox-item">
+									<input type="radio" id="q6-1" for="" title="至少選擇一個" name="age" value="1">
+									<label for="q6-1">否</label>
+								</div>
+								<div class="c-radiobox-item">
+									<input type="radio" id="q6-2" for="" title="至少選擇一個" name="age" value="2">
+									<label for="q6-2">是</label>
+								</div>
+							</div>
+							<div class="h-fz9 h-gray">(僅提供屏東、東部及離島地區)<br>收據請註明抬頭「國立臺中教育大學」，統一編號「52009903」</div>
+						</div>
+					</li>
+
+					<li>
+						<label for="" class="c-formShort-q">驗證碼</label>
+						<div class="c-formShort-a">
+							<div class="c-code">
+								<input type="text" class="">
+								<img src="/img/checkcode.png" alt="" class="checkcode">
+								<span class="icon-reload"></span>
+							</div>
+						</div>
+					</li>
+					<li class="privacy_li">
+						<label for="agree" class="c-checkbox">
+							<input type="checkbox" name="agree" id="agree" value="" class=""> 
+							<div class="c-checkbox-box"></div>
+							<span>我已仔細閱讀並明瞭個資所載內容及其意義，茲同意該等條款規定，並願遵守網站現今、嗣後規範的各種規則</span>
+						</label>
+						<div class="privacy_wrap">
+							<div class="privacy">
+								立臺中教育大學（以下簡稱本校）為蒐集、處理、利用個人資料，依個人資料保護法之規定，以本網頁之聲明及同意書向您行告知並徵求您同意。
+								當您於本網頁下方點選「閱讀並同意」時，表示您已閱讀、瞭解並同意接受本網頁之所有內容。<br><br>
+								
+								一、基本資料之蒐集、更新及保管<br>
+								(一)本校係依據中華民國「個人資料保護法」與相關法令之規範，蒐集、處理及利用您的個人資料。<br>
+								(二)請提供您本人正確、最新及完整的個人資料。<br>
+								(三)本校因執行業務所蒐集您的個人資料；如網頁所列各項個人資料填寫欄位。<br>
+								(四)若您的個人資料有任何異動，請主動向本校申請更正，使其保持正確、最新及完整。<br>
+								(五)若您提供錯誤、不實、過時或不完整或具誤導性的資料，您將可能損失相關權益。<br>
+								(六)您可依中華民國「個人資料保護法」，就您的個人資料行使以下權利：<br>
+								查詢或請求閱覽。<br>
+								請求製給複製本。<br>
+								請求補充或更正。<br>
+								請求停止蒐集、處理或利用。<br>
+								請求刪除。<br>
+								但本校各單位因執行職務或業務所必需者，本校得拒絕您上述之請求。且因您行使上述權利，而導致權益受損時，本校將不負相關賠償責任。<br><br>
+
+								二、蒐集個人資料之目的<br>
+								(一)本校係基於新住民語文課程教學實務精進推動計畫之特定目的而蒐集您的個人資料。<br>
+								(二)當您的個人資料使用方式與本校蒐集的目的不同時，我們會在使用前先徵求您的書面同意，您可以拒絕向本校提供個人資料，但您可能因此喪失您的權益。<br>
+								(三)自即日起本校於臺灣地區利用您的個人資料於辦理下列事項：<br>
+								本校利用研習課程之報名與管理。<br>
+								本校利用師資會員註冊與管理。<br>
+								三、基本資料之保密<br>
+								本校如違反「個人資料保護法」規定或因天災、事變或其他不可抗力所致者，致您的個人資料被竊取、洩漏、竄改、遭其他侵害者，本校將於查明後以電話、信函、電子郵件或網站公告等方法，擇適當方式通知您。<br>
+								四、同意之效力<br>
+								(一)當您於本網頁勾選「我已同意個人資料蒐集告知內容」時，即表示您已閱讀、瞭解並同意本網頁之所有內容。<br>
+								(二)本校保留隨時修改本網頁規範之權力，本校將於修改規範時，於本校網頁(站)公告修改之事實，不另作個別通知。如果您不同意修改的內容，請依上述第一條第六款向本校主張停止蒐集、處理及利用個人資料。否則將視為您已同意並接受本網頁該等增訂或修改內容之拘束。<br>
+								(三)您自本同意書取得的任何建議或資訊，無論是書面或口頭形式，除非本同意書條款有明確規定，均不構成本同意條款以外之任何保證。<br>
+								五、準據法與管轄法院<br>
+								本網頁內容之解釋與適用，以及相關之爭議，均應依照中華民國法律予以處理，並以臺灣臺中地方法院為第一審管轄法院。
+
+							</div>
+						</div>
+					</li>
+					<div class="c-btn-form">
+						<input type="button" value="送出" class="c-btn">
+					</div>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="h-mask" style="display: none;"></div>
+<div class="c-loading" style="display: none;">
+	<img src="/img/backend_img/fancybox_loading.gif" alt="loading">
+</div>
+<div class="c-lightbox-wrap" style="display: none;">
+	<div class="c-lightbox-wrapTxt">
+		<p>您已註冊成功！</p>
+		<!-- <p>請確實閱讀並勾選同意條款選項</p> -->
+		<div class="c-btn">確定</div>
+	</div>
+</div>
+
+
+
+
+
+
+<script>
+	
+
+</script>
+
+
+<!-- template footer -->
+<footer>
+	<div class="c-wrap1220">
+		<div class="l-footerbox">
+			<img src="/img/footer_logo.svg" alt="">
+			<div>
+				<ul>
+					<li class="footer_img">
+						<img src="/img/footer_deco.svg" alt="">
+						<h3>專案助理</h3>
+					</li>
+					<li>曾耀德 先生</li>
+					<li>信箱：toku6707@mail.ntcu.edu.tw</li>
+					<li>電話：04-22183149</li>
+				</ul>
+				<ul>
+					<li class="footer_img">
+						<img src="/img/footer_deco.svg" alt="">
+						<h3>專案助理</h3>
+					</li>
+					<li>陳儀珊 小姐</li>
+					<li>信箱：chenyishan@mail.ntcu.edu.tw</li>
+					<li>電話：04-22181052</li>
+				</ul>
+				<ul>
+					<li>國立臺中教育大學</li>
+					<li>地址：40306台中市西區民生路140號</li>
+				</ul>
+			</div>
+		</div>
+		<div class="l-copyright">
+			<p>Copyright © 2020國立臺中教育大學 All Rights Reserved.</p>
+			<a href="survey.html" class="c-btn">線上問卷</a>
+		</div>
+		<div class="l-gotop" id="top">
+			<span class="icon-arrow"></span>
+		</div>
+	</div>
+</footer>
+</body>
+
+ <script>
+ 	$('#top').on('click',function(){
+			$('html,body').animate({ scrollTop: 0},'slow');
+		});
+ </script>
+
+</html>
+

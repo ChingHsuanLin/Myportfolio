@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!-- html meta 屬性設定 -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 將使用ie瀏覽器的版本設定在預設，或是可以指定版本 ex:content="IE=8" -->
+
+	<meta name="title" content="新住民語文課程前導學校協作計畫">
+	<!-- <meta name="author" content="作者"> 如果不是新聞或blog類型的網站，基本上是不需要設定 -->
+	<!-- <meta name="keyword" content="關鍵字,關鍵字"> 不建議設定了，瀏覽器不會抓這裡，也不影響SEO -->
+	<meta name="description" content="新住民語文課程前導學校協作計畫">
+	<meta name="Copyright" content="© 2020國立台中教育大學">
+
+    <!-- 設定給手機device用 -->
+	<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes"/>
+	
+
+	<!-- Facebook og: 屬性設定 -->
+	<!-- <meta property="og:title" content="如果是文章就是文章的標題" />
+	<meta property="og:site_name" content="網站的名稱" />
+	<meta property="og:url" content="自定義分享連結的網址" />
+	<meta property="og:description" content="文章描述通常2~4句子" />
+	<meta property="og:image" content="呈現的圖片至少要1200x630"/>
+	<meta property="og:type" content="website" /> -->
+	<!-- https://developers.facebook.com/tools/debug (Facebook測試的og屬性的地方) -->
+
+	<title>新住民語文課程前導學校協作計畫</title>
+	<!-- 網頁頁籤上的icon -->
+	<link rel="shortcut icon" href="/img/favicon.ico">
+
+	<script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="/js/jquery.nav.js"></script>
+	<script src="/js/swiper.min.js"></script>
+
+    
+    <link rel="stylesheet" href="/css/swiper.min.css">
+    <link rel="stylesheet" href="/css/font.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/unreset.css">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+
+	<!--[if IE]>
+		<link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<![endif]-->
+
+	<!-- 讓ie9以下看懂htm5標簽 -->
+	<!--[if lte IE 8]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<!-- {template header} -->
+
+
+
+<div class="l-menu_mobile">
+  <div class="o-grid__item">
+    <button class="c-hamburger c-hamburger--htx">
+      <span>toggle menu</span>
+    </button>
+  </div>
+</div>
+
+<div class="l-menu">
+    <div class="l-menubar">
+      <!--  登入前的狀態 -->
+   <!--  <a href="login.html">登入</a>
+    /
+    <a href="sign_up.html">註冊</a> -->
+
+    <!--  登入後的狀態 -->
+      <a href="member.html">
+        <span class="icon-user"></span>
+        Hi,<span>Critical321</span>您好，會員中心</a>
+      /
+      <a href="#" class="h-opLight">登出</a>
+
+    </div>
+    <div class="l-menu_box">
+        <a href="index.html" class="l-logo" id="logo">
+          <h1><img src="/img/logo.gif" alt="新住民語文課程前導學校協作計畫"></h1>
+        </a>
+        <div class="l-menu_item">
+          <ul>
+            <!-- 當頁加上act -->
+            <li><a href="index.html" class="act">首頁</a></li>
+            <li><a href="news.html" class="">最新消息</a></li>
+            <li><a href="class.html" class="">研習課程</a></li>
+            <li><a href="event.html" class="">活動紀錄</a></li>
+            <li><a href="file.html" class="">語文教材</a></li>
+            <li><a href="" class="">悅趣式評估系統</a></li>
+            <li><a href="survey.html" class="">問卷</a></li>
+            <li><a href="public.html" class="">公開資料下載</a></li>
+            <li><a href="" class="">教學電子報</a></li>
+          </ul>
+        </div>
+    </div>  
+    
+</div>
+
+  <script>
+//漢堡
+$(window).load(function(){
+  var toggles = document.querySelectorAll(".c-hamburger");
+  for (var i = toggles.length - 1; i >= 0; i--) {
+    var toggle = toggles[i];
+    toggleHandler(toggle);
+  };
+  function toggleHandler(toggle) {
+    toggle.addEventListener( "click", function(e) {
+      e.preventDefault();
+      if (this.classList.contains("is-active") === true) {
+        this.classList.remove("is-active");
+                // $(".side-nav-wrap").stop().animate({left:"-250px"},500);//點漢堡側邊欄左右滑動
+                $(".l-menu_item").slideUp();
+                $('body').removeClass("h-noscroll");
+              }
+              else {
+                this.classList.add("is-active");
+                // $(".side-nav-wrap").stop().animate({left:"0"},500);//點漢堡側邊欄左右滑動
+                $(".l-menu_item").slideDown();
+                $('body').addClass("h-noscroll");
+              }
+            });
+  }
+
+
+  if($(window).width() < 1024)
+  {
+    //點擊a選單消失 
+    $('.l-menu_item a').on('click',function(){
+      $(".l-menu_item").hide();
+      $(".c-hamburger").removeClass("is-active");
+    });
+    
+  } else {
+
+    $('.l-menu_item a').on('click',function(){
+      $(".hl-menu_item").show();
+    });
+  }
+
+  
+  $('#logo').on('click',function(){
+    $('html,body').animate({ scrollTop: 0},'slow');
+  });
+
+
+
+});
+
+//漢堡視窗resize
+$(window).resize(function(){
+  var w_Width = $(window).width();
+  if( w_Width < 1024){
+      //點擊a選單消失 
+      $('.l-menu_item a').on('click',function(){
+        $(".l-menu_item").hide();
+        $(".c-hamburger").removeClass("is-active");
+      });
+
+    }
+    else{
+     $('.l-menu_item a').on('click',function(){
+      $(".l-menu_item").show();
+    });
+
+   }
+   if( w_Width >= 1024){
+    $('.l-menu_item').removeAttr('style');
+    $('.c-hamburger').removeClass('is-active');
+  }
+});
+
+
+
+
+
+
+</script>
+
+
+
+<div class="c-wrap-w deco-green-circle h-hidden">
+	<div class="c-wrap1020">
+		<ul class="c-breadcrumb">
+			<li>
+				<a href="index.html">首頁</a>
+			</li>
+			<li>
+				<a href="public.html">公開資料下載</a>
+			</li>
+			<li>公開資料下載標題</li>
+		</ul>
+
+		<div class="c-wrap-w">
+			<div class="c-cont-tit">公開資料下載公開資料下載吧標題標題標題</div>
+			<article class="h-mt30 h-mb80 h-gray">
+				為配合新課綱施行，國教署指出，107學年度將推動新住民語文課程前導計畫，分2梯次推動，前導學校遴選原則為邀請參與、指定參與及推薦參與，第一梯次自107年8月至108年1月，預計每縣市擇定1至3校，補助50校推行前導計畫。<br><br>
+				明年8月上路的12年國教新課綱納入新住民語文，教育部國教署推動縣市新住民語文課程前導學校示範教學，107學年第1學期有21縣市50所國小及2所國中63班參與，開設7國語文課程。屏東縣恆春國小開設越南等3種語言最多，校長鄭鴻博昨天指出，校內學新住民語的大部分都不是「新二代」，且家長很支持。<br><br>
+				12年國教課綱中，本土語文（含新住民語文）在國小必選、國中及高中則是選修。其中新住民語文以東南亞國家語文為主，包括越南、印尼、泰國、緬甸、柬埔寨、菲律賓及馬來西亞等7國官方語言。國小學生必須從本土語文及新住民語文中擇一必修，每周一節為原則；國中、高中階段則依學生需求於彈性課程開課!
+			</article>
+
+			<div class="l-tableWrap">
+				<div class="l-table-tit">
+					<div class="h-box85">
+						<div class="h-box85">檔案名稱</div>
+					</div>
+					<div class="h-box10">
+						<div>下載</div>
+					</div>
+				</div>
+				<div class="l-table-cont h-aicenter">
+					<div class="h-box85">
+						<div class="h-box85 h-blue">108學年度新住民語文課程開課Q&A-1</div>
+					</div>
+					<a href=""class="h-box10 h-center">
+						<span class="icon-download"></span>
+					</a>
+				</div>
+				<div class="l-table-cont h-aicenter">
+					<div class="h-box85">
+						<div class="h-box85 h-blue">108學年度新住民語文課程開課Q&A-2</div>
+					</div>
+					<a href=""class="h-box10 h-center">
+						<span class="icon-download"></span>
+					</a>
+				</div>
+				<div class="l-table-cont h-aicenter">
+					<div class="h-box85">
+						<div class="h-box85 h-blue">108學年度新住民語文課程開課Q&A-3</div>
+					</div>
+					<a href=""class="h-box10 h-center">
+						<span class="icon-download"></span>
+					</a>
+				</div>
+				
+			</div>
+			
+
+
+			
+
+		</div>
+		<div class="h-center">
+			<a href="public.html" class="c-btn">返回公開資料下載列表</a>
+		</div>
+		
+		
+	</div>
+</div>
+
+
+
+
+
+
+<script>
+	
+
+</script>
+
+
+<!-- template footer -->
+<footer>
+	<div class="c-wrap1220">
+		<div class="l-footerbox">
+			<img src="/img/footer_logo.svg" alt="">
+			<div>
+				<ul>
+					<li class="footer_img">
+						<img src="/img/footer_deco.svg" alt="">
+						<h3>專案助理</h3>
+					</li>
+					<li>曾耀德 先生</li>
+					<li>信箱：toku6707@mail.ntcu.edu.tw</li>
+					<li>電話：04-22183149</li>
+				</ul>
+				<ul>
+					<li class="footer_img">
+						<img src="/img/footer_deco.svg" alt="">
+						<h3>專案助理</h3>
+					</li>
+					<li>陳儀珊 小姐</li>
+					<li>信箱：chenyishan@mail.ntcu.edu.tw</li>
+					<li>電話：04-22181052</li>
+				</ul>
+				<ul>
+					<li>國立臺中教育大學</li>
+					<li>地址：40306台中市西區民生路140號</li>
+				</ul>
+			</div>
+		</div>
+		<div class="l-copyright">
+			<p>Copyright © 2020國立臺中教育大學 All Rights Reserved.</p>
+			<a href="survey.html" class="c-btn">線上問卷</a>
+		</div>
+		<div class="l-gotop" id="top">
+			<span class="icon-arrow"></span>
+		</div>
+	</div>
+</footer>
+</body>
+
+ <script>
+ 	$('#top').on('click',function(){
+			$('html,body').animate({ scrollTop: 0},'slow');
+		});
+ </script>
+
+</html>
+

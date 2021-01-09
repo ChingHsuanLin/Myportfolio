@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!-- html meta 屬性設定 -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 將使用ie瀏覽器的版本設定在預設，或是可以指定版本 ex:content="IE=8" -->
+
+	<meta name="title" content="新住民語文課程前導學校協作計畫">
+	<!-- <meta name="author" content="作者"> 如果不是新聞或blog類型的網站，基本上是不需要設定 -->
+	<!-- <meta name="keyword" content="關鍵字,關鍵字"> 不建議設定了，瀏覽器不會抓這裡，也不影響SEO -->
+	<meta name="description" content="新住民語文課程前導學校協作計畫">
+	<meta name="Copyright" content="© 2020國立台中教育大學">
+
+    <!-- 設定給手機device用 -->
+	<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes"/>
+	
+
+	<!-- Facebook og: 屬性設定 -->
+	<!-- <meta property="og:title" content="如果是文章就是文章的標題" />
+	<meta property="og:site_name" content="網站的名稱" />
+	<meta property="og:url" content="自定義分享連結的網址" />
+	<meta property="og:description" content="文章描述通常2~4句子" />
+	<meta property="og:image" content="呈現的圖片至少要1200x630"/>
+	<meta property="og:type" content="website" /> -->
+	<!-- https://developers.facebook.com/tools/debug (Facebook測試的og屬性的地方) -->
+
+	<title>新住民語文課程前導學校協作計畫</title>
+	<!-- 網頁頁籤上的icon -->
+	<link rel="shortcut icon" href="/img/favicon.ico">
+
+	<script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="/js/jquery.nav.js"></script>
+	<script src="/js/swiper.min.js"></script>
+
+    
+    <link rel="stylesheet" href="/css/swiper.min.css">
+    <link rel="stylesheet" href="/css/font.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/unreset.css">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+
+	<!--[if IE]>
+		<link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<![endif]-->
+
+	<!-- 讓ie9以下看懂htm5標簽 -->
+	<!--[if lte IE 8]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<!-- {template header} -->
+
+
+
+<div class="l-menu_mobile">
+  <div class="o-grid__item">
+    <button class="c-hamburger c-hamburger--htx">
+      <span>toggle menu</span>
+    </button>
+  </div>
+</div>
+
+<div class="l-menu">
+    <div class="l-menubar">
+      <!--  登入前的狀態 -->
+   <!--  <a href="login.html">登入</a>
+    /
+    <a href="sign_up.html">註冊</a> -->
+
+    <!--  登入後的狀態 -->
+      <a href="member.html">
+        <span class="icon-user"></span>
+        Hi,<span>Critical321</span>您好，會員中心</a>
+      /
+      <a href="#" class="h-opLight">登出</a>
+
+    </div>
+    <div class="l-menu_box">
+        <a href="index.html" class="l-logo" id="logo">
+          <h1><img src="/img/logo.gif" alt="新住民語文課程前導學校協作計畫"></h1>
+        </a>
+        <div class="l-menu_item">
+          <ul>
+            <!-- 當頁加上act -->
+            <li><a href="index.html" class="act">首頁</a></li>
+            <li><a href="news.html" class="">最新消息</a></li>
+            <li><a href="class.html" class="">研習課程</a></li>
+            <li><a href="event.html" class="">活動紀錄</a></li>
+            <li><a href="file.html" class="">語文教材</a></li>
+            <li><a href="" class="">悅趣式評估系統</a></li>
+            <li><a href="survey.html" class="">問卷</a></li>
+            <li><a href="public.html" class="">公開資料下載</a></li>
+            <li><a href="" class="">教學電子報</a></li>
+          </ul>
+        </div>
+    </div>  
+    
+</div>
+
+  <script>
+//漢堡
+$(window).load(function(){
+  var toggles = document.querySelectorAll(".c-hamburger");
+  for (var i = toggles.length - 1; i >= 0; i--) {
+    var toggle = toggles[i];
+    toggleHandler(toggle);
+  };
+  function toggleHandler(toggle) {
+    toggle.addEventListener( "click", function(e) {
+      e.preventDefault();
+      if (this.classList.contains("is-active") === true) {
+        this.classList.remove("is-active");
+                // $(".side-nav-wrap").stop().animate({left:"-250px"},500);//點漢堡側邊欄左右滑動
+                $(".l-menu_item").slideUp();
+                $('body').removeClass("h-noscroll");
+              }
+              else {
+                this.classList.add("is-active");
+                // $(".side-nav-wrap").stop().animate({left:"0"},500);//點漢堡側邊欄左右滑動
+                $(".l-menu_item").slideDown();
+                $('body').addClass("h-noscroll");
+              }
+            });
+  }
+
+
+  if($(window).width() < 1024)
+  {
+    //點擊a選單消失 
+    $('.l-menu_item a').on('click',function(){
+      $(".l-menu_item").hide();
+      $(".c-hamburger").removeClass("is-active");
+    });
+    
+  } else {
+
+    $('.l-menu_item a').on('click',function(){
+      $(".hl-menu_item").show();
+    });
+  }
+
+  
+  $('#logo').on('click',function(){
+    $('html,body').animate({ scrollTop: 0},'slow');
+  });
+
+
+
+});
+
+//漢堡視窗resize
+$(window).resize(function(){
+  var w_Width = $(window).width();
+  if( w_Width < 1024){
+      //點擊a選單消失 
+      $('.l-menu_item a').on('click',function(){
+        $(".l-menu_item").hide();
+        $(".c-hamburger").removeClass("is-active");
+      });
+
+    }
+    else{
+     $('.l-menu_item a').on('click',function(){
+      $(".l-menu_item").show();
+    });
+
+   }
+   if( w_Width >= 1024){
+    $('.l-menu_item').removeAttr('style');
+    $('.c-hamburger').removeClass('is-active');
+  }
+});
+
+
+
+
+
+
+</script>
+
+
+
+<div class="c-wrap-w h-hidden">
+	<div class="c-wrap1220 h-pdT80">
+		<div class="c-title">
+			<h2>ABOUT</h2>
+			<img src="/img/tit_deco.svg" alt="">
+			<p>計畫簡介</p>
+		</div>
+		<!-- <article class="unreset">
+			<p>為持續促進教學支援工作人員專業發展，精進新住民語文教學品質，提升教學效能，本計畫核心工作小組成員將協同主題領域專家學者、新住民語文課程開課學校之教學指導教師和教學支援人員、以及邀請縣市輔導團夥伴進行專業對話，期望透過健全地方教學輔導團，運作專業學習社群，評估語文程度級別等規劃，並朝整合運用資源，建立專業支持與輔導系統，爰委請國立臺中教育大學辦理「新住民語文課程教學實務精進推動計畫」，以四大主軸推動執行。
+				</p>
+		</article> -->
+		<div class="about-box">
+			<div class="about-img about-img1">
+				<img src="/img/about_img1.svg" alt="計畫簡介">
+			</div>
+			<div>
+				<p>為持續促進教學支援工作人員專業發展，精進新住民語文教學品質，提升教學效能，本計畫核心工作小組成員將協同主題領域專家學者、新住民語文課程開課學校之教學指導教師和教學支援人員、以及邀請縣市輔導團夥伴進行專業對話，期望透過健全地方教學輔導團，運作專業學習社群，評估語文程度級別等規劃，並朝整合運用資源，建立專業支持與輔導系統，爰委請國立臺中教育大學辦理「新住民語文課程教學實務精進推動計畫」，以四大主軸推動執行。
+				</p>
+			</div>
+		</div>
+		<div class="about-box about-box2">
+			<div>
+				<ul>
+					<li>學生選課歷程 (含文化向度、認知向度、情境向度)</li>
+					<li>情境導向悅趣評估語文程度分級評估 (越南語第三冊)</li>
+					<li>教材教法、媒體素養精進社群動態</li>
+					<li>政策文宣、電子報推播</li>
+				</ul>
+				<p>本計畫將逐步彙整有關新住民語文課程教育政策評估或擬定所需之實徵導向資料，以期提供教育部國教署於新住民語文課程教學、師資職能精進、以及政策宣導整體作為之參酌。
+				</p>
+			</div>
+			<div class="about-img about-img2">
+				<img src="/img/about_img2.svg" alt="計畫簡介" class="img_desk">
+				<img src="/img/about_img2_m.svg" alt="計畫簡介" class="img_m">
+			</div>
+		</div>
+		<div class="about-box about-box3">
+			<img src="/img/about_img3.svg" alt="計畫簡介" class="img_desk">
+			<img src="/img/about_img3_m.svg" alt="計畫簡介" class="img_m">
+		</div>
+	</div>
+</div>
+
+<div class="h-bgGray h-hidden h-mt30">
+	<div class="c-wrap1220 h-pdT90 index-news">
+		<div class="c-title h-flex-center">
+			<h2>NEWS</h2>
+			<img src="/img/tit_deco.svg" alt="">
+			<p>最新消息</p>
+		</div>
+		<div class="swiper-container swiperNews">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<h2>北一區第二梯次前導學校期末經驗分享座談會</h2>
+					<p>為配合新課綱施行，國教署指出，107學年度將推動新住民語文課程前導計畫，分2梯次推動，前導學校遴選原則為邀請參與、指定參與及推薦參與，第一梯次自107年8月至108年1月，預計每縣市擇定1至3校，補助50校推行前導計畫。</p>
+					<a href="news_cont.html" class="c-btn">詳細內容</a>
+				</div>
+				<div class="swiper-slide">
+					<h2>北一區第二梯次前導學校期末經驗分享座談會</h2>
+					<p>為配合新課綱施行，國教署指出，107學年度將推動新住民語文課程前導計畫，分2梯次推動，前導學校遴選原則為邀請參與、指定參與及推薦參與，第一梯次自107年8月至108年1月，預計每縣市擇定1至3校，補助50校推行前導計畫。</p>
+					<a href="news_cont.html" class="c-btn">詳細內容</a>
+				</div>
+				<div class="swiper-slide">
+					<h2>北一區第二梯次前導學校期末經驗分享座談會</h2>
+					<p>為配合新課108年1月，預計每縣市擇定1至3校，補助50校推行前導計畫。</p>
+					<a href="news_cont.html" class="c-btn">詳細內容</a>
+				</div>
+				<div class="swiper-slide">
+					<h2>北一區第二梯次前導學校期末經驗分享座談會</h2>
+					<p>為配合新課綱施行，國教署指出，107學年度將推動新住民語文課程前導計畫，分2梯次推動，前導學校遴選原則為邀請參與、指定參與及推薦參與，第一梯次自107年8月至108年1月，預計每縣市擇定1至3校，補助50校推行前導計畫。</p>
+					<a href="news_cont.html" class="c-btn">詳細內容</a>
+				</div>
+				<div class="swiper-slide">
+					<h2>北一區第二梯次前導學校期末經驗分享座談會</h2>
+					<p>為配合新課綱施行，國教署指出，107學年度將推動新住民語文課程前導計畫，分2梯次推動，前導學校遴選原則為邀請參與、指定參與及推薦參與，第一梯次自107年8月至108年1月，預計每縣市擇定1至3校，補助50校推行前導計畫。</p>
+					<a href="news_cont.html" class="c-btn">詳細內容</a>
+				</div>
+				<div class="swiper-slide">
+					<h2>北一區第二梯次前導學校期末經驗分享座談會</h2>
+					<p>為配合新課108年1月，預計每縣市擇定1至3校，補助50校推行前導計畫。</p>
+					<a href="news_cont.html" class="c-btn">詳細內容</a>
+				</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination news-page"></div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next news-next"></div>
+			<div class="swiper-button-prev news-prev"></div>
+		</div>
+		
+	</div>		
+</div>
+
+<div class="deco-orange h-mt30">
+	<div class="c-wrap1220 h-pdT90">
+		<div class="c-title h-flex-center c-title-long">
+			<h2>STUDY COURSE</h2>
+			<img src="/img/tit_deco.svg" alt="">
+			<p>研習課程</p>
+		</div>
+		<div class="swiper-container swiperCourse">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="/img/sample/photo3.jpg" alt="">
+					<div>
+						<h2>北一區第二梯次前導學校期末經驗分享座談會</h2>
+						<h3>開課日期：2020/03/20</h3>
+						<p>為配合新課綱施行，國教署指出，107學年度將推動新住民語文課程前導計畫，分2梯次推動，前導學校遴選原則為邀請參與、指定參與及推薦參與，第一梯次自107年8月至108年1月，預計每縣市擇定1至3校，補助50校推行前導計畫。</p>
+						<a href="class_cont.html" class="c-btn">詳細內容</a>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<img src="/img/sample/photo4.jpg" alt="">
+					<div>
+						<h2>北一區第二梯次前導學校期末經驗分享座談會</h2>
+						<h3>開課日期：2020/03/20</h3>
+						<p>為配合新課綱施行，國教署指出，107學年度將推動新住民語文課程前導計畫，分2梯次推動，前導學校遴選原則為邀請參與、指定參與及推薦參與，第一梯次自107年8月至108年1月，預計每縣市擇定1至3校，補助50校推行前導計畫。</p>
+						<a href="class_cont.html" class="c-btn">詳細內容</a>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<img src="/img/sample/photo1.jpg" alt="">
+					<div>
+						<h2>北一區第二梯次前導學校期末經驗分享座談會</h2>
+						<h3>開課日期：2020/03/20</h3>
+						<p>為配合新課綱施行，國教署指出，107學年度將推動新住民語文課程前導計畫。</p>
+						<a href="class_cont.html" class="c-btn">詳細內容</a>
+					</div>
+				</div>
+			</div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next course-next"></div>
+			<div class="swiper-button-prev course-prev"></div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination course-page"></div>
+		</div>
+	</div>		
+</div>
+
+
+<div class="deco-yellow">
+	<div class="c-wrap1220 h-pdT90">
+		<div class="c-title">
+			<h2>EVENT</h2>
+			<img src="/img/tit_deco.svg" alt="">
+			<p>活動紀錄</p>
+		</div>
+	</div>
+	<div class="c-wrap-w event_wrap">
+		<div class="swiper-container swiperEvent">
+			<div class="swiper-wrapper">
+				<a href="event_cont.html" class="swiper-slide">
+					<div class="event-slideWrap">
+						<div class="event-slide" style="background-image: url(/img/sample/photo1.jpg);"></div>
+					</div>
+					<p>新住民語文將列必修課 50所學校先示範</p>
+				</a>
+				<a href="event_cont.html" class="swiper-slide">
+					<div class="event-slideWrap">
+						<div class="event-slide" style="background-image: url(/img/sample/photo2.jpg);"></div>
+					</div>
+					<p>50所學校先示範</p>
+				</a>
+				<a href="event_cont.html" class="swiper-slide">
+					<div class="event-slideWrap">
+						<div class="event-slide" style="background-image: url(/img/sample/photo3.jpg);"></div>
+					</div>
+					<p>新住民語文將列必修課123</p>
+				</a>
+				<a href="event_cont.html" class="swiper-slide">
+					<div class="event-slideWrap">
+						<div class="event-slide" style="background-image: url(/img/sample/photo4.jpg);"></div>
+					</div>
+					<p>1450所學校先示範</p>
+				</a>
+			</div>
+			<!-- Add Arrows -->
+		    <div class="swiper-button-next event-next"></div>
+		    <div class="swiper-button-prev event-prev"></div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination event-page"></div>
+		</div>
+	</div>
+</div>
+
+
+<div class="c-wrap-W">
+	<div class="c-wrap1220 h-pdT90">
+		<div class="c-title">
+			<h2>VIDEO</h2>
+			<img src="/img/tit_deco.svg" alt="">
+			<p>活動影音</p>
+		</div>
+	</div>
+	<div class="c-wrap-w">
+		<div class="swiper-container swiperVideo">
+			<div class="swiper-wrapper">
+				<div  class="swiper-slide">
+					<iframe src="https://www.youtube.com/embed/7ap_yFj_89k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div  class="swiper-slide">
+					<iframe src="https://www.youtube.com/embed/7ap_yFj_89k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div  class="swiper-slide">
+					<iframe src="https://www.youtube.com/embed/7ap_yFj_89k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="video_mask_left"></div>
+ 			<div class="video_mask_right"></div>
+			<!-- Add Arrows -->
+		    <div class="swiper-button-next video-next"></div>
+		    <div class="swiper-button-prev video-prev"></div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination video-page"></div>
+		</div>
+	</div>
+</div>
+
+	
+
+
+
+
+
+<script>
+	$(window).load(function(){
+
+		
+
+		//活動紀錄
+		var swiperEvent = new Swiper('.swiperEvent', {
+	      slidesPerView: 'auto',
+	      spaceBetween: 25,
+	     // centeredSlides: true,
+	      //slidesOffsetBefore : -120,
+	      loop:true,
+	      navigation: {
+	        nextEl: '.event-next',
+	        prevEl: '.event-prev',
+	      },
+	      pagination: {
+	        el: '.event-page',
+	        clickable: true,
+	      },
+	      breakpoints: {
+				780: {
+					slidesOffsetBefore :0,
+				},
+				600: {
+					slidesOffsetBefore :0,
+					spaceBetween: 10,
+				},
+			}
+	    });
+
+		//研習課程
+	    var swiperCourse = new Swiper('.swiperCourse', {
+	      slidesPerView:1,
+	      spaceBetween: 40,
+	      navigation: {
+	        nextEl: '.course-next',
+	        prevEl: '.course-prev',
+	      },
+	      pagination: {
+	        el: '.course-page',
+	        clickable: true,
+	      },
+	    });
+
+	    //研習課程
+	    var swiperCourse = new Swiper('.swiperNews', {
+	      slidesPerView:3,
+	      spaceBetween: 0,
+	      slidesPerGroup: 3,
+	      navigation: {
+	        nextEl: '.news-next',
+	        prevEl: '.news-prev',
+	      },
+	      pagination: {
+	        el: '.news-page',
+	        clickable: true,
+	      },
+	      breakpoints: {
+				780: {
+					
+				},
+				600: {
+					 slidesPerView:1,
+					 slidesPerGroup: 1,
+				},
+			}
+	    });
+
+	    //影音
+		var swiperVideo = new Swiper('.swiperVideo', {
+			slidesPerView: 'auto',
+			centeredSlides: true,
+			spaceBetween: 15,
+			loopAdditionalSlides : 2,
+			loop: true,
+			navigation: {
+				nextEl: '.video-next',
+				prevEl: '.video-prev',
+			},
+			pagination: {
+		        el: '.video-page',
+		        clickable: true,
+		      },
+		});
+
+
+		
+
+	});
+
+</script>
+
+
+<!-- template footer -->
+<footer>
+	<div class="c-wrap1220">
+		<div class="l-footerbox">
+			<img src="/img/footer_logo.svg" alt="">
+			<div>
+				<ul>
+					<li class="footer_img">
+						<img src="/img/footer_deco.svg" alt="">
+						<h3>專案助理</h3>
+					</li>
+					<li>曾耀德 先生</li>
+					<li>信箱：toku6707@mail.ntcu.edu.tw</li>
+					<li>電話：04-22183149</li>
+				</ul>
+				<ul>
+					<li class="footer_img">
+						<img src="/img/footer_deco.svg" alt="">
+						<h3>專案助理</h3>
+					</li>
+					<li>陳儀珊 小姐</li>
+					<li>信箱：chenyishan@mail.ntcu.edu.tw</li>
+					<li>電話：04-22181052</li>
+				</ul>
+				<ul>
+					<li>國立臺中教育大學</li>
+					<li>地址：40306台中市西區民生路140號</li>
+				</ul>
+			</div>
+		</div>
+		<div class="l-copyright">
+			<p>Copyright © 2020國立臺中教育大學 All Rights Reserved.</p>
+			<a href="survey.html" class="c-btn">線上問卷</a>
+		</div>
+		<div class="l-gotop" id="top">
+			<span class="icon-arrow"></span>
+		</div>
+	</div>
+</footer>
+</body>
+
+ <script>
+ 	$('#top').on('click',function(){
+			$('html,body').animate({ scrollTop: 0},'slow');
+		});
+ </script>
+
+</html>
+
