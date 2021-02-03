@@ -544,6 +544,10 @@ a.h-td-underline {
         font-size: 1.8rem;
         font-weight: bold;
         transition: all .3s; }
+  .myAbout .h-flex a:hover img {
+    opacity: .7; }
+  .myAbout .h-flex img {
+    width: 40px; }
 
 .contactMe {
   display: flex;
@@ -555,22 +559,38 @@ a.h-td-underline {
   .contactMe:hover span {
     text-decoration: underline; }
 
+@media screen and (max-width: 1030px) {
+  .myPic {
+    right: 20px; }
+  .myAbout h1 {
+    font-size: 4.5rem; }
+    .myAbout h1:before, .myAbout h1:after {
+      transform: translateX(5px); } }
+
 @media screen and (max-width: 780px) {
   .myAbout h1 {
-    font-size: 4rem; } }
+    font-size: 3.8rem; }
+  .myPic {
+    top: 31%; } }
 
 @media screen and (max-width: 600px) {
   .intr-wrap {
     margin: 0px auto;
-    padding-top: 60px; }
+    padding-top: 20px; }
   .myAbout h1 {
-    font-size: 3.3rem;
-    margin-bottom: 60px; }
+    font-size: 4rem;
+    margin-top: -60px; }
   .myAbout h2 {
     font-size: 1.2rem; }
+    .myAbout h2 span {
+      padding: 0 5px; }
   .myPic {
-    top: 50px;
-    width: 40%; } }
+    top: 0px;
+    width: 70%;
+    position: relative;
+    margin: 0 auto;
+    right: auto;
+    transform: translateY(0); } }
 
 .about-wrap > li {
   border-bottom: 1px solid #000;
@@ -589,11 +609,11 @@ a.h-td-underline {
   .skills-list li:first-child {
     margin-bottom: 30px; }
   .skills-list li > div:first-child {
-    width: 32%;
+    width: 25%;
     font-weight: bold;
     font-size: 1.1rem; }
   .skills-list li > div:last-child {
-    width: 68%;
+    width: 75%;
     display: flex;
     flex-wrap: wrap; }
     .skills-list li > div:last-child p {
@@ -642,3 +662,6 @@ footer {
     font-size: 1.1rem; }
     footer a:hover {
       text-decoration: underline; }
+    footer a img {
+      width: 50px;
+      margin: 20px auto 0; }
