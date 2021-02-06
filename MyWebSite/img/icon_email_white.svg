@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="14px" viewBox="0 0 18 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>icon_email</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.0003 -0.0001 18 -0.0001 18 13.7106 0.0003 13.7106"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_email">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="path-1"></g>
+            <path d="M16.9453,11.9106 L11.8903,6.8556 L16.9453,1.8006 L16.9453,11.9106 Z M1.8003,12.6566 L6.8823,7.5736 L8.6643,9.3396 C8.8703,9.5436 9.2023,9.5426 9.4083,9.3376 L11.1443,7.6006 L16.1993,12.6566 L1.8003,12.6566 Z M1.0543,11.9106 L1.0543,1.7956 L6.1333,6.8306 L1.0543,11.9106 Z M16.1993,1.0546 L9.0333,8.2206 L1.8053,1.0546 L16.1993,1.0546 Z M16.4183,-0.0004 L1.5823,-0.0004 C0.7113,-0.0004 0.0003,0.7096 0.0003,1.5816 L0.0003,12.1286 C0.0003,12.9976 0.7073,13.7106 1.5823,13.7106 L16.4183,13.7106 C17.2873,13.7106 18.0003,13.0036 18.0003,12.1286 L18.0003,1.5816 C18.0003,0.7126 17.2923,-0.0004 16.4183,-0.0004 L16.4183,-0.0004 Z" id="Fill-1" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>
