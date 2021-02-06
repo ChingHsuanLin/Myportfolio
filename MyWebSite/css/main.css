@@ -218,7 +218,7 @@ nav {
     letter-spacing: .05em;
     padding: 20px 10px;
     position: absolute;
-    width: 10em;
+    width: 250px;
     right: -5em;
     pointer-events: none;
     opacity: 0;
@@ -453,11 +453,11 @@ footer {
 
 .c-page-wrap {
   background: #ccc;
-  padding: 50px 20px;
+  padding: 70px 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  margin-right: calc(( 100% - 1400px ) /2);
+  max-width: 1400px;
   position: relative;
-  margin-bottom: 230px; }
+  margin: 0 auto 230px; }
   .c-page-wrap:before {
     width: 100%;
     height: 80vh;
@@ -475,6 +475,32 @@ footer {
     margin-bottom: 0; }
     .c-page-wrap:before {
       display: none; } }
+
+@media screen and (max-width: 600px) {
+  .c-page-wrap {
+    padding: 40px 20px; }
+    .c-page-wrap .c-wrap-800 {
+      padding: 0; } }
+
+.c-back {
+  position: fixed;
+  left: 40px;
+  top: 30px;
+  width: 50px;
+  transition: all .3s;
+  z-index: 5; }
+  .c-back img {
+    width: 100%; }
+  .c-back:hover {
+    opacity: .6; }
+
+@media screen and (max-width: 600px) {
+  .c-back {
+    width: 40px;
+    left: 5px;
+    top: 20px; }
+    .c-back img {
+      filter: drop-shadow(2px 2px 1px #fff); } }
 
 .h-noscroll {
   overflow: hidden;
