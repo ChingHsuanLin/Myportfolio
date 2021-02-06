@@ -11,11 +11,6 @@
 	<title>Ching Hsuan’s Portfolio | 林靜萱 </title>
 	
 	<script src="../../js/jquery-3.4.0.js"></script>
-	<!-- <script src="../../js/jquery-1.10.0.min.js"></script> -->
-	<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
-
-	<!-- 網頁頁籤上的icon -->
-	<link rel="stylesheet" href="../../css/aos.css">
 	<link rel="shortcut icon" href="../../img/favicon.png">
 	<link rel="stylesheet" href="../../css/main.css">
 </head>
@@ -28,7 +23,7 @@
 <section class="l-wrapper">
 
 	<div class="l-nav_wrap">
-		<nav class="">
+		<nav>
 			<div class="circle"></div> 
 			<div class="navBtn">
 				<div></div>
@@ -73,16 +68,16 @@
 			
 			<ul>
 				<li>
-					<a href="#aboutWrap">About Me</a>
+					<a href="#aboutWrap" id="btnAbout">About Me</a>
 				</li>
 				<li>
-					<a href="#webDesignWrap">Web Design</a>
+					<a href="#webDesignWrap" id="btnWeb">Web Design</a>
 				</li>
 				<li>
-					<a href="#AppWrap">App UI/UX</a>
+					<a href="#AppWrap" id="btnApp">App UI/UX</a>
 				</li>
 				<li>
-					<a href="#bannerWrap">Banner Design</a>
+					<a href="#bannerWrap" id="btnBanner">Banner Design</a>
 				</li>
 			</ul>
 		</div>
@@ -436,24 +431,12 @@
 	</div>
 </div>
 
+
+<script src="../../js/jquery.nav.js"></script>
+<script src="../../js/all.js"></script>
+
 </section>
 
-
-
-<script>
-
-	$(".navBtn").on("click", function (e) {
-		// e.preventDefault();
-		if($(this).parent().hasClass('open'))
-        {
-        	$(this).parent().removeClass('open');
-        }
-        else{
-        	$(this).parent().addClass('open');
-        }
-	});
-	
-</script>
 
 
 

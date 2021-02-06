@@ -223,8 +223,14 @@ nav {
     pointer-events: none;
     opacity: 0;
     transition: .15s 0s; }
+    nav ul a {
+      transition: all .3s; }
     nav ul a:hover {
-      opacity: .7; }
+      transform: translateX(-20px);
+      font-weight: bold; }
+    nav ul li.act a {
+      transform: translateX(-20px);
+      font-weight: bold; }
   nav .circle {
     background-color: #fade34;
     border-radius: 50%;
