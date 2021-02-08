@@ -1,8 +1,5 @@
 $(document).ready(function() {
 
-
-
-
 	
 	$('#btnAbout').unbind('click').on('click', function() {
        	 $('html,body').animate({scrollTop:$('#aboutWrap').offset().top}, 500); 
@@ -27,6 +24,11 @@ $(document).ready(function() {
         	$(this).parent().addClass('open');
         }
 	});
+
+  $("nav a").on("click", function (e) {
+    e.preventDefault();
+    $(this).parent().parent().parent().removeClass('open');
+  });
 
 
 	//捲軸滾動，選單跟著動
